@@ -5,5 +5,10 @@ class User < ActiveRecord::Base
   validates_format_of    :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/
   validates_uniqueness_of:login
   validates_uniqueness_of:email
+
+  def self.user_is_valid?(login, password)
+    user = User.find(:first, :conditions => "(login = '#{login}' or email = '#{login}') and password = '#{password}'")
+    return !(user.nil?)
+  end
 end
 
