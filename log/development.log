@@ -2616,3 +2616,483 @@ Completed in 25ms (View: 6, DB: 8) | 200 OK [http://localhost/session/new]
   [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
   [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
 >>>>>>> bdd2a1c1711cd160df5e4545f798c553a9920f18
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 10:42:30) [GET]
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = '' or email = '') and password = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 30ms (View: 13, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-17 10:56:08) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 49ms (View: 39, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 10:56:21) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2010-07-17 10:56:28) [GET]
+
+
+ActionController::UnknownAction (No action responded to login. Actions: index and new):
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 10:58:20) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 10:59:29) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:00:30) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:01:16) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+ERROR: compiling _run_erb_app47views47session47index46html46erb RAISED compile error
+/home/rodrigo/projects/ecommerce/app/views/session/index.html.erb:12: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( :action => 'login' unless session[:user]...
+                              ^
+Function body:           def _run_erb_app47views47session47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_tag(new_session_path, :method => "post") do ; @output_buffer.concat "\n  <p>Login: <input type=\"text\" name=\"login\"/></p>\n  <p>Senha: <input type=\"password\" name=\"senha\"/></p>\n  <p><a href=\"javascript:void(0)\">Esqueceu a senha ?</a></p>\n  <p><a href=\"/users/new\">Cadastre-se !</a></p>\n\n  <input type=\"submit\" value=\"Entrar\"/>\n\n  <strong>"
+
+
+
+
+
+
+
+; @output_buffer.concat(( flash[:user_looser] ).to_s); @output_buffer.concat "</strong>\n  <strong>"
+; @output_buffer.concat(( flash[:user_winner] ).to_s); @output_buffer.concat "</strong>\n\n  "
+
+; @output_buffer.concat(( :action => 'login' unless session[:user] ).to_s); @output_buffer.concat "\n  "
+;  if flash[:message] ; @output_buffer.concat "\n    <strong>"
+; @output_buffer.concat(( h flash[:message] ).to_s); @output_buffer.concat "</strong>\n  "
+;  end ; @output_buffer.concat "\n\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/rodrigo/projects/ecommerce/app/views/session/index.html.erb:22:in `compile!'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rodrigo/projects/ecommerce/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/rodrigo/projects/ecommerce/app/controllers/session_controller.rb:19:in `new'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/rodrigo/projects/ecommerce/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/rodrigo/projects/ecommerce/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+/home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+/usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+/usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:282
+/home/rodrigo/projects/ecommerce/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/rodrigo/projects/ecommerce/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rodrigo/projects/ecommerce/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rodrigo/projects/ecommerce/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/rodrigo/projects/ecommerce/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/rodrigo/projects/ecommerce/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rodrigo/projects/ecommerce/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/rodrigo/projects/ecommerce/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/rodrigo/projects/ecommerce/vendor/rails/railties/lib/commands/server.rb:49
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/rodrigo/projects/ecommerce/app/views/session/index.html.erb:12: syntax error, unexpected tASSOC, expecting ')'
+...put_buffer.concat(( :action => 'login' unless session[:user]...
+                              ^) on line #12 of app/views/session/index.html.erb:
+9:   <strong><%= flash[:user_looser] %></strong>
+10:   <strong><%= flash[:user_winner] %></strong>
+11: 
+12:   <%= :action => 'login' unless session[:user] %>
+13:   <% if flash[:message] %>
+14:     <strong><%= h flash[:message] %></strong>
+15:   <% end %>
+
+    app/views/session/index.html.erb:22:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    app/controllers/session_controller.rb:19:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (38.9ms)
+Rendered /home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.6ms)
+Rendering /home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:02:03) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:04:57) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:05:11) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:06:01) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 96ms (View: 6, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:06:15) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 16ms (View: 6, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:12:06) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (2.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 19ms (View: 7, DB: 2) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-17 11:32:18) [POST]
+  Parameters: {"authenticity_token"=>"4087c090d587590fff71c475ef7316cf81918e59", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (3.7ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 19ms (View: 6, DB: 4) | 200 OK [http://localhost/session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-17 11:32:47) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 46ms (View: 36, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-17 11:34:18) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 21ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-17 11:34:18) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-17 11:34:29) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-17 11:34:29) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)

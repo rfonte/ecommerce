@@ -2,6 +2,9 @@ class SessionController < ApplicationController
   def new
     login = params[:login]
     senha = params[:senha]
+    session[:login] = login #@User
+    session[:senha] = senha
+    flash[:message] = "Data was saved successfully"
 
     user_valid = User.user_is_valid?(login, senha)
 

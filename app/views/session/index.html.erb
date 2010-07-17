@@ -3,8 +3,16 @@
   <p>Senha: <input type="password" name="senha"/></p>
   <p><a href="javascript:void(0)">Esqueceu a senha ?</a></p>
   <p><a href="/users/new">Cadastre-se !</a></p>
+
   <input type="submit" value="Entrar"/>
+
   <strong><%= flash[:user_looser] %></strong>
   <strong><%= flash[:user_winner] %></strong>
+  <!--
+  <%= link_to "teste", :action => 'login' unless session[:user] %>
+  <% if flash[:message] %>
+    <strong><%= h flash[:message] %></strong>
+  <% end %>
+  -->
 <% end %>
 
