@@ -6,11 +6,15 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Users: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'scaffold' %>
+  <link href="/stylesheets/home.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
-
-<%= yield  %>
-
+<div id="topo"></div>
+<div id="content">
+  <div id="menu"></div>
+  <div id="contentCore"><%= yield  %></dev>
+</div>
+<div id="footer"></div>
 </body>
 </html>
 
