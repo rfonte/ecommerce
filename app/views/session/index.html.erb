@@ -5,9 +5,10 @@
   <p><a href="/users/new">Cadastre-se !</a></p>
 
   <input type="submit" value="Entrar"/>
-
-  <strong><%= flash[:user_looser] %></strong>
-  <strong><%= flash[:user_winner] %></strong>
+  <p>
+    <strong><%= flash[:user_looser] %></strong>
+    <strong><%= flash[:user_winner] %></strong>
+  <p>
   <!--
   <%= link_to "teste", :action => 'login' unless session[:user] %>
   <% if flash[:message] %>

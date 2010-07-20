@@ -9,7 +9,7 @@ class SessionController < ApplicationController
     user_valid = User.user_is_valid?(login, senha)
 
     if user_valid
-      flash[:user_winner] = "Eba !!"
+      flash[:user_winner] = "Login efetuado com sucesso !!"
       flash[:user_looser] = ""
     else
       flash[:user_looser] = "Usuário Inválido !!"

@@ -3096,3 +3096,636 @@ ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" wit
     script/server:3
 
 Rendering /home/rodrigo/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:43:41) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = '' or email = '') and password = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 38ms (View: 14, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:43:42) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:44:06) [GET]
+  [4;35;1mUser Load (17.2ms)[0m   [0mSELECT * FROM "users" WHERE ((login = '' or email = '') and password = '') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 34ms (View: 7, DB: 17) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:44:09) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-20 10:44:21) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 80ms (View: 35, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:44:22) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:44:37) [POST]
+  Parameters: {"authenticity_token"=>"9f8b58283f4c8bf5245a5f2f44052fee102d5e4c", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 41ms (View: 18, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:44:38) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:47:06) [POST]
+  Parameters: {"authenticity_token"=>"9f8b58283f4c8bf5245a5f2f44052fee102d5e4c", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 52ms (View: 16, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:47:06) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:49:51) [POST]
+  Parameters: {"authenticity_token"=>"9f8b58283f4c8bf5245a5f2f44052fee102d5e4c", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 49ms (View: 15, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:49:52) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:51:01) [POST]
+  Parameters: {"authenticity_token"=>"9f8b58283f4c8bf5245a5f2f44052fee102d5e4c", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 67ms (View: 26, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:51:02) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:51:20) [POST]
+  Parameters: {"authenticity_token"=>"9f8b58283f4c8bf5245a5f2f44052fee102d5e4c", "login"=>"rodrigofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodrigofonte' or email = 'rodrigofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 38ms (View: 15, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:51:20) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:51:50) [POST]
+  Parameters: {"authenticity_token"=>"9f8b58283f4c8bf5245a5f2f44052fee102d5e4c", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;36;1mUser Load (1.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 47ms (View: 16, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:51:51) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-20 10:52:38) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 56ms (View: 37, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:52:39) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-20 10:53:46) [POST]
+  Parameters: {"authenticity_token"=>"9f8b58283f4c8bf5245a5f2f44052fee102d5e4c", "login"=>"rodriofonte", "senha"=>"12345"}
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ((login = 'rodriofonte' or email = 'rodriofonte') and password = '12345') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 47ms (View: 23, DB: 1) | 200 OK [http://localhost/session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-20 10:53:47) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /vendor/rails/actionpack/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /vendor/rails/actionpack/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    /vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
