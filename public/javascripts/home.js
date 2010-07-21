@@ -1,6 +1,10 @@
-(function() {
+$(document).ready (function() {
     $(".textbox").textboxClear()
-    console.log("ebaa !!")
 
-})
+    $("#pwd").focus(function() {
+        $(this)
+            .attr("value","")
+            document.getElementById("pwd").setAttribute("type","password");
+    });
+});
 
