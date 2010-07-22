@@ -1,6 +1,7 @@
 class CreateRoles < ActiveRecord::Migration
   def self.up
     create_table :roles do |t|
+      t.integer :name
 
       t.timestamps
     end
@@ -10,3 +11,4 @@ class CreateRoles < ActiveRecord::Migration
     drop_table :roles
   end
 end
+

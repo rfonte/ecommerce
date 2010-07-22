@@ -1,6 +1,7 @@
 class CreatePermissions < ActiveRecord::Migration
   def self.up
     create_table :permissions do |t|
+      t.integer :name
 
       t.timestamps
     end
@@ -10,3 +11,4 @@ class CreatePermissions < ActiveRecord::Migration
     drop_table :permissions
   end
 end
+
