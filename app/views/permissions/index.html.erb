@@ -2,10 +2,12 @@
 
 <table>
   <tr>
+    <th>Name</th>
   </tr>
 
 <% for permission in @permissions %>
   <tr>
+    <td><%=h permission.name %></td>
     <td><%= link_to 'Show', permission %></td>
     <td><%= link_to 'Edit', edit_permission_path(permission) %></td>
     <td><%= link_to 'Destroy', permission, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -16,3 +18,5 @@
 <br />
 
 <%= link_to 'New permission', new_permission_path %>
+<p><a href="/control_panel"/>Voltar ao Painel de Controle</p>
+

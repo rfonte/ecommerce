@@ -9,10 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100722193306) do
+ActiveRecord::Schema.define(:version => 20100722195301) do
 
   create_table "permissions", :force => true do |t|
-    t.integer  "name"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20100722193306) do
   end
 
   create_table "roles", :force => true do |t|
-    t.integer  "name"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
