@@ -1,0 +1,13 @@
+<p>
+  <b>Id role:</b>
+  <%=h @role_permission.id_role %>
+</p>
+
+<p>
+  <b>Id permission:</b>
+  <%=h @role_permission.id_permission %>
+</p>
+
+
+<%= link_to 'Edit', edit_role_permission_path(@role_permission) %> |
+<%= link_to 'Back', role_permissions_path %>

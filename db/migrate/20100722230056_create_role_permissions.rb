@@ -1,8 +1,8 @@
 class CreateRolePermissions < ActiveRecord::Migration
   def self.up
     create_table :role_permissions do |t|
-      t.integer :id_role
-      t.integer :id_permission
+      t.string :id_role
+      t.string :id_permission
 
       t.timestamps
     end
@@ -12,4 +12,3 @@ class CreateRolePermissions < ActiveRecord::Migration
     drop_table :role_permissions
   end
 end
-

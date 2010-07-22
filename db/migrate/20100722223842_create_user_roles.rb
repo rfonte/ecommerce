@@ -12,4 +12,3 @@ class CreateUserRoles < ActiveRecord::Migration
     drop_table :user_roles
   end
 end
-

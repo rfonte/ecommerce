@@ -1,0 +1,20 @@
+<h1>Editing role_permission</h1>
+
+<% form_for(@role_permission) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id_role %><br />
+    <%= f.text_field :id_role %>
+  </p>
+  <p>
+    <%= f.label :id_permission %><br />
+    <%= f.text_field :id_permission %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @role_permission %> |
+<%= link_to 'Back', role_permissions_path %>

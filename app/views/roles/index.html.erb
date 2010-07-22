@@ -3,10 +3,12 @@
 <table>
   <tr>
     <th>Name</th>
+    <th>ID</th>
   </tr>
 
 <% for role in @roles %>
   <tr>
+    <td><%=h role.id %></td>
     <td><%=h role.name %></td>
     <td><%= link_to 'Show', role %></td>
     <td><%= link_to 'Edit', edit_role_path(role) %></td>
@@ -18,5 +20,5 @@
 <br />
 
 <%= link_to 'New role', new_role_path %>
-<p><a href="/control_panel"/>Voltar ao Painel de Controle</p>
+<p><a href="/control_panel">Voltar ao Painel de Controle</a></p>
 

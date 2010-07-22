@@ -1,0 +1,24 @@
+<h1>Listing user_roles</h1>
+
+<table>
+  <tr>
+    <th>Id user</th>
+    <th>Id role</th>
+  </tr>
+
+<% for user_role in @user_roles %>
+  <tr>
+    <td><%=h user_role.id_user %></td>
+    <td><%=h user_role.id_role %></td>
+    <td><%= link_to 'Show', user_role %></td>
+    <td><%= link_to 'Edit', edit_user_role_path(user_role) %></td>
+    <td><%= link_to 'Destroy', user_role, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user_role', new_user_role_path %>
+<p><a href="/control_panel">Voltar ao Painel de Controle</a></p>
+

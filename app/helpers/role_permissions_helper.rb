@@ -1,0 +1,2 @@
+module RolePermissionsHelper
+end
