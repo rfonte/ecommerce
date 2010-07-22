@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
     return !(user.nil?)
   end
 
+  def user_last_login
+
+  end
+
  # @user.first.last_login = "1234" tentativa de atribuição na hora que cria um novo user
 end
 
