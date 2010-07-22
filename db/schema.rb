@@ -9,13 +9,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100722164601) do
+ActiveRecord::Schema.define(:version => 20100722181218) do
+
+  create_table "permissions", :force => true do |t|
+    t.integer  "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "role_permissions", :force => true do |t|
+    t.integer  "id_role"
+    t.integer  "id_permission"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", :force => true do |t|
-    t.string   "login"
-    t.string   "create_user"
-    t.string   "view_all_users"
-    t.string   "all"
+    t.integer  "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_roles", :force => true do |t|
+    t.integer  "id_user"
+    t.integer  "id_role"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

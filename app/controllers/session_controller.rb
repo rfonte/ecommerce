@@ -20,7 +20,6 @@ class SessionController < ApplicationController
   end
 
   def index
-
   end
 
  end

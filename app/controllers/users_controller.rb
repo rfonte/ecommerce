@@ -44,7 +44,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         flash[:notice] = 'User was successfully created.'
-        Roles.create :login => params[:user][:login]
+        #Roles.create :login => params[:user][:login]
         format.html { redirect_to(@user) }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
@@ -75,9 +75,9 @@ class UsersController < ApplicationController
   # DELETE /users/1.xml
   def destroy
     @user = User.find(params[:id])
-    role = Roles.find_by_login(@user.login)
+    #role = Roles.find_by_login(@user.login)
     @user.destroy
-    role.destroy
+    #role.destroy
 
     respond_to do |format|
       format.html { redirect_to(users_url) }
