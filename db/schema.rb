@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100715194531) do
+ActiveRecord::Schema.define(:version => 20100722164601) do
+
+  create_table "roles", :force => true do |t|
+    t.string   "login"
+    t.string   "create_user"
+    t.string   "view_all_users"
+    t.string   "all"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login"

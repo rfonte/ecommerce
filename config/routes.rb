@@ -43,7 +43,5 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :session, :only => [:new, :index]
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
-  map.forgot  '/forgot',                    :controller => 'users',     :action => 'forgot'
-  map.reset   'reset/:reset_code',          :controller => 'users',     :action => 'reset'
 end
 
