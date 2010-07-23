@@ -1,4 +1,4 @@
 class Role < ActiveRecord::Base
-  has_many :permissions, :through => :role_permitions
+  has_many :permissions, :through => :role_permition
 end
 
