@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :roles, :through => :user_roles
+  has_many :user_roles
   validates_presence_of  :login, :password, :name, :email
   validates_length_of    :login, :in => 6..14
   validates_length_of    :password, :in => 5..50

@@ -1,6 +1,7 @@
 class RolePermissionsController < ApplicationController
   # GET /role_permissions
   # GET /role_permissions.xml
+  before_filter :autorization
   def index
     @role_permissions = RolePermission.find(:all)
 
@@ -83,3 +84,4 @@ class RolePermissionsController < ApplicationController
     end
   end
 end
+

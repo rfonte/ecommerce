@@ -1,6 +1,7 @@
 class UserRolesController < ApplicationController
   # GET /user_roles
   # GET /user_roles.xml
+  before_filter :autorization
   def index
     @user_roles = UserRole.find(:all)
 
@@ -83,3 +84,4 @@ class UserRolesController < ApplicationController
     end
   end
 end
+

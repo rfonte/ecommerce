@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
+  before_filter :autorization
   def index
     @users = User.find(:all)
 
@@ -40,11 +41,10 @@ class UsersController < ApplicationController
   # POST /users.xml
   def create
     @user = User.new(params[:user])
-
+    @user.roles << Role.find(2)
     respond_to do |format|
       if @user.save
         flash[:notice] = 'User was successfully created.'
-        #Roles.create :login => params[:user][:login]
         format.html { redirect_to(@user) }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
