@@ -75,9 +75,9 @@ class UsersController < ApplicationController
   # DELETE /users/1.xml
   def destroy
     @user = User.find(params[:id])
-    #role = Roles.find_by_login(@user.login)
     @user.destroy
-    #role.destroy
+    user_role = UserRole.find(:first , :conditions => "(user_id = '#{params[:id]}')")
+    user_role.destroy
 
     respond_to do |format|
       format.html { redirect_to(users_url) }

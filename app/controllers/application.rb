@@ -16,9 +16,9 @@ class ApplicationController < ActionController::Base
   def autorization
     permission = params[:controller] + params[:action]
     userID = User.find(:first , :conditions => "(login = '#{session[:login]}')")
-    youCan = RolePermission.find(:first , :conditions => "(user_id = '#{userID.id}')
-                                                      and (permission_id = '#{permission}')")
-    return !(youCan.nil?)
+    #youCan = RolePermission.find(:first , :conditions => "(user_id = '#{userID.id}')
+    #                                                  and (permission_id = '#{permission}')")
+    #return !(youCan.nil?)
   end
 end
 
