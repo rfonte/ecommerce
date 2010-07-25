@@ -27976,3 +27976,1450 @@ RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wa
 Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (35.1ms)
 Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
 Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (15.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100715194531)
+Migrating to CreateRoles (20100722195231)
+Migrating to CreatePermissions (20100722195301)
+Migrating to CreateUserRoles (20100722223842)
+Migrating to CreateRolePermissions (20100722230056)
+Migrating to AjusteUserRoles (20100723200640)
+Migrating to AjusteRolePermissions (20100723210941)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mdescribe `permissions`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `permissions`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `role_permissions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mdescribe `role_permissions`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `role_permissions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `roles`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `roles`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mdescribe `user_roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `user_roles`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `users`[0m
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 13:03:48) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 73ms (View: 18, DB: 1) | 200 OK [http://localhost/control_panel]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 13:06:23) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 37ms (View: 14, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 13:06:28) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 13:06:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"control_panel_index"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.3ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('control_panel_index', '2010-07-24 16:06:44', '2010-07-24 16:06:44')[0m
+  [4;36;1mSQL (34.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb673dce4>
+Completed in 56ms (DB: 36) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 13:06:44) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/permissions/2]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 13:06:45) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 13:09:11) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-07-24 13:12:45) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mRole Load (0.3ms)[0m   [0mSELECT * FROM `roles` [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;36;1mRole Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+Completed in 57ms (View: 25, DB: 2) | 200 OK [http://localhost/roles]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 13:12:48) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 13:12:49) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.1ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 30ms (View: 15, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 13:12:56) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 13:13:27) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"permissions_edit"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.3ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('permissions_edit', '2010-07-24 16:13:27', '2010-07-24 16:13:27')[0m
+  [4;35;1mSQL (48.0ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb654d3bc>
+Completed in 68ms (DB: 49) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 13:13:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/3]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 13:13:28) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 36ms (View: 19, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 13:13:30) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 13:13:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"permissions_index"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('permissions_index', '2010-07-24 16:13:39', '2010-07-24 16:13:39')[0m
+  [4;36;1mSQL (45.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb659813c>
+Completed in 64ms (DB: 47) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 13:13:39) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 4) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/permissions/4]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 13:13:41) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 98ms (View: 83, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 13:13:43) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 13:13:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"permissions_new"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.2ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('permissions_new', '2010-07-24 16:13:54', '2010-07-24 16:13:54')[0m
+  [4;35;1mSQL (46.0ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb65f83fc>
+Completed in 67ms (DB: 47) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 13:13:54) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 5) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/5]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 13:13:55) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 41ms (View: 27, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 13:13:56) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 13:14:06) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"permissions_show"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('permissions_show', '2010-07-24 16:14:06', '2010-07-24 16:14:06')[0m
+  [4;36;1mSQL (32.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb668c7a0>
+Completed in 54ms (DB: 34) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 13:14:07) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 6) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 22ms (View: 6, DB: 1) | 200 OK [http://localhost/permissions/6]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 13:14:08) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.4ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 45ms (View: 31, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:16:08) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 83ms (View: 69, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:16:26) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"role_permissions_edit"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.2ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('role_permissions_edit', '2010-07-24 17:16:26', '2010-07-24 17:16:26')[0m
+  [4;35;1mSQL (54.6ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb670fa60>
+Completed in 77ms (DB: 56) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:16:26) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 7) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/permissions/7]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:16:28) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 49ms (View: 35, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:16:30) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:16:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"role_permissions_index"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('role_permissions_index', '2010-07-24 17:16:48', '2010-07-24 17:16:48')[0m
+  [4;36;1mSQL (36.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb6771f30>
+Completed in 58ms (DB: 38) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:16:48) [GET]
+  Parameters: {"id"=>"8"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 8) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/8]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:16:50) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 55ms (View: 40, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:16:55) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:17:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"role_permissions_new"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.2ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('role_permissions_new', '2010-07-24 17:17:09', '2010-07-24 17:17:09')[0m
+  [4;35;1mSQL (46.7ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb64b4b80>
+Completed in 67ms (DB: 48) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:17:09) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 22ms (View: 6, DB: 1) | 200 OK [http://localhost/permissions/9]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:17:11) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 72ms (View: 56, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:17:17) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (1.7ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 23ms (View: 7, DB: 3) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:17:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"role_permissions_show"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('role_permissions_show', '2010-07-24 17:17:28', '2010-07-24 17:17:28')[0m
+  [4;36;1mSQL (47.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb64e2314>
+Completed in 68ms (DB: 49) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:17:28) [GET]
+  Parameters: {"id"=>"10"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 10) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 86ms (View: 6, DB: 1) | 200 OK [http://localhost/permissions/10]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:17:29) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.4ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 70ms (View: 51, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:17:36) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:17:46) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"roles_edit"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.3ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('roles_edit', '2010-07-24 17:17:46', '2010-07-24 17:17:46')[0m
+  [4;35;1mSQL (27.1ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb650f8dc>
+Completed in 59ms (DB: 28) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:17:46) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 11) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 23ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/11]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:17:48) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 70ms (View: 54, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:17:51) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:18:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"roles_index"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('roles_index', '2010-07-24 17:18:01', '2010-07-24 17:18:01')[0m
+  [4;36;1mSQL (38.5ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb6530654>
+Completed in 58ms (DB: 40) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:18:01) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 12) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/12]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:18:03) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 75ms (View: 58, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:18:05) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 26ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:18:18) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"roles_new"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.3ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('roles_new', '2010-07-24 17:18:18', '2010-07-24 17:18:18')[0m
+  [4;35;1mSQL (54.7ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb654c3a4>
+Completed in 75ms (DB: 56) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:18:18) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 13) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/13]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:18:19) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 145ms (View: 67, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:18:22) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:18:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"roles_show"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('roles_show', '2010-07-24 17:18:31', '2010-07-24 17:18:31')[0m
+  [4;36;1mSQL (41.7ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb65659bc>
+Completed in 63ms (DB: 43) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:18:31) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 14) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 29ms (View: 5, DB: 2) | 200 OK [http://localhost/permissions/14]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:18:33) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 150ms (View: 130, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:18:39) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:18:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"session_index"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.2ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('session_index', '2010-07-24 17:18:50', '2010-07-24 17:18:50')[0m
+  [4;35;1mSQL (47.2ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb65c2644>
+Completed in 68ms (DB: 49) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:18:50) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 15) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/15]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:18:51) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 82ms (View: 68, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:18:52) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:19:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"user_roles_edit"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('user_roles_edit', '2010-07-24 17:19:04', '2010-07-24 17:19:04')[0m
+  [4;36;1mSQL (146.6ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb6637534>
+Completed in 168ms (DB: 148) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:19:04) [GET]
+  Parameters: {"id"=>"16"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 16) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 20ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/16]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:19:05) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.6ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 88ms (View: 73, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:19:07) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:19:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"user_roles_index"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.3ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('user_roles_index', '2010-07-24 17:19:22', '2010-07-24 17:19:22')[0m
+  [4;35;1mSQL (49.3ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb6646b74>
+Completed in 72ms (DB: 51) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:19:22) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 17) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/17]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:19:24) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 91ms (View: 76, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:19:29) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:19:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"user_roles_new"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('user_roles_new', '2010-07-24 17:19:34', '2010-07-24 17:19:34')[0m
+  [4;36;1mSQL (60.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb66552c8>
+Completed in 81ms (DB: 61) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:19:34) [GET]
+  Parameters: {"id"=>"18"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 18) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 21ms (View: 6, DB: 1) | 200 OK [http://localhost/permissions/18]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:19:35) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 98ms (View: 82, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:19:39) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:19:44) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"user_roles_show"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.2ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('user_roles_show', '2010-07-24 17:19:44', '2010-07-24 17:19:44')[0m
+  [4;35;1mSQL (67.2ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb6664afc>
+Completed in 89ms (DB: 69) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:19:44) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 19) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/19]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:19:46) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 112ms (View: 97, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:19:55) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:20:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"users_edit"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.3ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('users_edit', '2010-07-24 17:20:10', '2010-07-24 17:20:10')[0m
+  [4;36;1mSQL (48.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb667bc34>
+Completed in 71ms (DB: 50) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:20:10) [GET]
+  Parameters: {"id"=>"20"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 20) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 23ms (View: 5, DB: 3) | 200 OK [http://localhost/permissions/20]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:20:12) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 103ms (View: 89, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:20:16) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:20:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"users_index"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.2ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('users_index', '2010-07-24 17:20:28', '2010-07-24 17:20:28')[0m
+  [4;35;1mSQL (48.5ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb6681210>
+Completed in 71ms (DB: 50) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:20:28) [GET]
+  Parameters: {"id"=>"21"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 21) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/21]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:20:30) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 118ms (View: 103, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:20:36) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:20:52) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:21:01) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"users_new"}}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPermission Create (0.2ms)[0m   [0mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('users_new', '2010-07-24 17:21:02', '2010-07-24 17:21:02')[0m
+  [4;36;1mSQL (41.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to #<Permission:0xb65f3c58>
+Completed in 62ms (DB: 42) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:21:02) [GET]
+  Parameters: {"id"=>"22"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 22) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 20ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/22]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:21:04) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 180ms (View: 165, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#new (for 127.0.0.1 at 2010-07-24 14:21:11) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Rendering template within layouts/application
+Rendering permissions/new
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/permissions/new]
+
+
+Processing PermissionsController#create (for 127.0.0.1 at 2010-07-24 14:21:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8f9273094b2a6aec5c6fa7097574a1b4826861d4", "permission"=>{"name"=>"users_show"}}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPermission Create (0.2ms)[0m   [0;1mINSERT INTO `permissions` (`name`, `created_at`, `updated_at`) VALUES('users_show', '2010-07-24 17:21:19', '2010-07-24 17:21:19')[0m
+  [4;35;1mSQL (51.3ms)[0m   [0mCOMMIT[0m
+Redirected to #<Permission:0xb6563054>
+Completed in 71ms (DB: 53) | 302 Found [http://localhost/permissions]
+
+
+Processing PermissionsController#show (for 127.0.0.1 at 2010-07-24 14:21:19) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` = 23) [0m
+Rendering template within layouts/application
+Rendering permissions/show
+Completed in 22ms (View: 5, DB: 1) | 200 OK [http://localhost/permissions/23]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:21:20) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.3ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 212ms (View: 196, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 14:21:30) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:22:21) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+Completed in 118ms (View: 103, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 14:23:02) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.1ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 188ms (View: 174, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 14:23:10) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-24 14:23:29) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 54ms (View: 43, DB: 2) | 200 OK [http://localhost/users]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 14:23:33) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 23:12:49) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-24 23:12:57) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Completed in 26ms (View: 15, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 23:13:00) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 14ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing UserRolesController#index (for 127.0.0.1 at 2010-07-24 23:14:24) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mUserRole Load (0.3ms)[0m   [0;1mSELECT * FROM `user_roles` [0m
+Rendering template within layouts/application
+Rendering user_roles/index
+  [4;35;1mUserRole Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+Completed in 63ms (View: 31, DB: 2) | 200 OK [http://localhost/user_roles]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 23:14:30) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-07-24 23:14:31) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/roles]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 23:14:33) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 26ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing RolePermissionsController#index (for 127.0.0.1 at 2010-07-24 23:14:35) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mRolePermission Load (0.3ms)[0m   [0;1mSELECT * FROM `role_permissions` [0m
+Rendering template within layouts/application
+Rendering role_permissions/index
+  [4;35;1mRolePermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `role_permissions`[0m
+
+
+ActionView::TemplateError (undefined method `id_role' for #<RolePermission:0xb659b3f0>) on line #11 of app/views/role_permissions/index.html.erb:
+8: 
+9: <% for role_permission in @role_permissions %>
+10:   <tr>
+11:     <td><%=h role_permission.id_role %></td>
+12:     <td><%=h role_permission.id_permission %></td>
+13:     <td><%= link_to 'Show', role_permission %></td>
+14:     <td><%= link_to 'Edit', edit_role_permission_path(role_permission) %></td>
+
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/role_permissions/index.html.erb:11
+    app/views/role_permissions/index.html.erb:9:in `each'
+    app/views/role_permissions/index.html.erb:9
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/renderable.rb:39:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/template.rb:73:in `render_template'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:256:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:369:in `_render_with_layout'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_view/base.rb:254:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1177:in `render_for_file'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:51:in `render'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:135
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `call'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:164:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `each'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:158:in `respond'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/role_permissions_controller.rb:8:in `index'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:617:in `call_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/activerecord-2.2.3/lib/active_record/query_cache.rb:8:in `cache'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `send'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:524:in `process_without_filters'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/session_management.rb:134:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/base.rb:392:in `process'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_trace (53.5ms)
+Rendered /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing RolePermissionsController#index (for 127.0.0.1 at 2010-07-24 23:17:03) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mRolePermission Load (0.1ms)[0m   [0mSELECT * FROM `role_permissions` [0m
+Rendering template within layouts/application
+Rendering role_permissions/index
+  [4;36;1mRolePermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `role_permissions`[0m
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/role_permissions]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 23:17:08) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing UserRolesController#index (for 127.0.0.1 at 2010-07-24 23:17:10) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` [0m
+Rendering template within layouts/application
+Rendering user_roles/index
+  [4;36;1mUserRole Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+Completed in 92ms (View: 12, DB: 1) | 200 OK [http://localhost/user_roles]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 23:17:13) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing RolePermissionsController#index (for 127.0.0.1 at 2010-07-24 23:17:15) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mRolePermission Load (0.1ms)[0m   [0mSELECT * FROM `role_permissions` [0m
+Rendering template within layouts/application
+Rendering role_permissions/index
+  [4;36;1mRolePermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `role_permissions`[0m
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/role_permissions]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 23:17:19) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 13ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing PermissionsController#index (for 127.0.0.1 at 2010-07-24 23:17:21) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mPermission Load (0.1ms)[0m   [0mSELECT * FROM `permissions` [0m
+Rendering template within layouts/application
+Rendering permissions/index
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+Completed in 201ms (View: 184, DB: 1) | 200 OK [http://localhost/permissions]
+
+
+Processing RolesController#index (for 127.0.0.1 at 2010-07-24 23:17:36) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;36;1mRole Load (0.1ms)[0m   [0;1mSELECT * FROM `roles` [0m
+Rendering template within layouts/application
+Rendering roles/index
+  [4;35;1mRole Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `roles`[0m
+Completed in 30ms (View: 14, DB: 1) | 200 OK [http://localhost/roles]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-24 23:17:40) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-24 23:17:43) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = '')) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/control_panel]

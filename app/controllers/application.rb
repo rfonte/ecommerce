@@ -14,10 +14,11 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 
   def autorization
-    permission = params[:controller] + params[:action]
+    permission = params[:controller] + '_' + params[:action]
     userID = User.find(:first , :conditions => "(login = '#{session[:login]}')")
     #youCan = RolePermission.find(:first , :conditions => "(user_id = '#{userID.id}')
     #                                                  and (permission_id = '#{permission}')")
+    #A.find(:all, :conditions => ["b.foo = ?", 25], :joins => {:b =>{}} )
     #return !(youCan.nil?)
   end
 end

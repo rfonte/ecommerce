@@ -36,7 +36,6 @@ body {
 #content {
     background: #ccc none repeat scroll 0 0;
     display: block;
-    height: 570px;
     margin: 2px auto;
 }
 a:link {color: #CD0000;}
@@ -49,7 +48,6 @@ a:active {color: #0000FF;}
 }
 #contentCore {
     background: #000 none repeat scroll 0 0;
-    height:500px;
     padding: 4px;
     position: relative;
     top: 2px;
