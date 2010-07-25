@@ -15,7 +15,17 @@ class ApplicationController < ActionController::Base
 
   def autorization
     permission = params[:controller] + '_' + params[:action]
+    debugger
     userID = User.find(:first , :conditions => "(login = '#{session[:login]}')")
+    flash[:teste] = userID
+    a = UserRole.find(:first, :conditions => "(user_id = 'params[:userID.id]')")
+    b = RolePermission.find(:first, :conditions => "(role_id = 'params[:a.role_id]')")
+
+    if b.permission_id == 1
+      return true
+    else
+      return false
+    end
     #youCan = RolePermission.find(:first , :conditions => "(user_id = '#{userID.id}')
     #                                                  and (permission_id = '#{permission}')")
     #A.find(:all, :conditions => ["b.foo = ?", 25], :joins => {:b =>{}} )
