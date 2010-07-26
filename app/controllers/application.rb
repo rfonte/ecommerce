@@ -23,7 +23,8 @@ class ApplicationController < ActionController::Base
     if permissionID.permission_id == '1' || permissionName.name == "#{permission}"
       return true
     else
-      render :text => "vc nao pode fazer isso viadinho!"
+      render :text => "Acesso Negado !!"
+      return false
     end
 
     #youCan = RolePermission.find(:first , :conditions => "(user_id = '#{userID.id}')
