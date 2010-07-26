@@ -11,26 +11,24 @@ class ApplicationController < ActionController::Base
   # See ActionController::Base for details
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password").
-  # filter_parameter_logging :password
+  #filter_parameter_logging :password
 
   def autorization
-    permission = params[:controller] + '_' + params[:action]
-    userID = User.find(:first , :conditions => "(login = '#{session[:login]}')")
-    roleID = UserRole.find(:first, :conditions => "(user_id = #{userID.id})")
-    permissionID = RolePermission.find(:first, :conditions => "(role_id = #{roleID.role_id})")
-    permissionName = Permission.find(:first, :conditions => "(id = #{permissionID.permission_id})")
-
-    if permissionID.permission_id == '1' || permissionName.name == "#{permission}"
-      return true
-    else
+    if session[:login] == nil
       render :text => "Acesso Negado !!"
       return false
     end
-
-    #youCan = RolePermission.find(:first , :conditions => "(user_id = '#{userID.id}')
-    #                                                  and (permission_id = '#{permission}')")
+    allowed = false
+    permission = "#{params[:controller]}_#{params[:action]}"
+    userID = User.find(:first , :conditions => "(login = '#{session[:login]}')")
+    roleID = UserRole.find(:first, :conditions => "(user_id = #{userID.id})")
+    permissionID = RolePermission.find(:first, :conditions => "(role_id = #{roleID.role_id})")
+    if permissionID
+      permissionName = Permission.find(:first, :conditions => "id = #{permissionID.permission_id}")
+      allowed = true if permissionID.permission_id == 1 || permissionName.name == "#{permission}"
+    end
+    render :text => "Acesso Negado !!" unless allowed
     #A.find(:all, :conditions => ["b.foo = ?", 25], :joins => {:b =>{}} )
-    #return !(youCan.nil?)
   end
 end
 

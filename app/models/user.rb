@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of:email
 
   def self.user_is_valid?(login, password)
-    user = User.find(:first, :conditions => "(login = '#{login}' or email = '#{login}') and password = '#{password}'")
+    user = User.find(:first, :conditions => [ "(login = ? or email = ?) AND password = ?", login, login, password])
     return !(user.nil?)
   end
 end
