@@ -30,6 +30,5 @@ class ApplicationController < ActionController::Base
     render :text => "Acesso Negado !!" unless allowed
     #A.find(:all, :conditions => ["b.foo = ?", 25], :joins => {:b =>{}} )
   end
-  end
 end
 

@@ -2,7 +2,6 @@ class SessionController < ApplicationController
   def new
     login = params[:login]
     senha = params[:senha]
-    debugger
     logout = params[:logout]
 
     if logout != nil
