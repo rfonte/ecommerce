@@ -1,5 +1,5 @@
 $(document).ready (function() {
-
+/*
     $("#loginLink").click(function(){
         $('#login')
             .css("display","block")
@@ -11,14 +11,14 @@ $(document).ready (function() {
         $('#login')
             .css("display","block")
     }),
-    /*
+
     $(".logout").click(function() {
 
-    }),*/
+    }),
 
     $(".close_login").click(function() {
         $('#login')
             .css("display","none")
-    })
+    })*/
 });
 
