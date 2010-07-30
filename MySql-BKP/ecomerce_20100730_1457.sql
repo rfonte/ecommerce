@@ -1,7 +1,7 @@
 -- MySQL Administrator dump 1.4
 --
 -- ------------------------------------------------------
--- Server version	5.1.41-3ubuntu12.3
+-- Server version	5.1.37-1ubuntu5.4
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -32,7 +32,7 @@ CREATE TABLE  `ecomerce`.`permissions` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ecomerce`.`permissions`
@@ -54,15 +54,16 @@ INSERT INTO `ecomerce`.`permissions` VALUES  (1,'All','2010-07-23 02:10:27','201
  (12,'roles_index','2010-07-24 17:18:01','2010-07-24 17:18:01'),
  (13,'roles_new','2010-07-24 17:18:18','2010-07-24 17:18:18'),
  (14,'roles_show','2010-07-24 17:18:31','2010-07-24 17:18:31'),
- (15,'session_index','2010-07-24 17:18:50','2010-07-24 17:18:50'),
- (16,'user_roles_edit','2010-07-24 17:19:04','2010-07-24 17:19:04'),
+ (15,'session_index','2010-07-24 17:18:50','2010-07-24 17:18:50');
+INSERT INTO `ecomerce`.`permissions` VALUES  (16,'user_roles_edit','2010-07-24 17:19:04','2010-07-24 17:19:04'),
  (17,'user_roles_index','2010-07-24 17:19:22','2010-07-24 17:19:22'),
  (18,'user_roles_new','2010-07-24 17:19:34','2010-07-24 17:19:34'),
  (19,'user_roles_show','2010-07-24 17:19:44','2010-07-24 17:19:44'),
  (20,'users_edit','2010-07-24 17:20:10','2010-07-24 17:20:10'),
  (21,'users_index','2010-07-24 17:20:28','2010-07-24 17:20:28'),
  (22,'users_new','2010-07-24 17:21:02','2010-07-24 17:21:02'),
- (23,'users_show','2010-07-24 17:21:19','2010-07-24 17:21:19');
+ (23,'users_show','2010-07-24 17:21:19','2010-07-24 17:21:19'),
+ (24,'users_destroy','2010-07-24 17:21:19','2010-07-24 17:21:19');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `permissions` ENABLE KEYS */;
 
@@ -74,12 +75,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `ecomerce`.`role_permissions`;
 CREATE TABLE  `ecomerce`.`role_permissions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `role_id` varchar(255) DEFAULT NULL,
-  `permission_id` varchar(255) DEFAULT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  `permission_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ecomerce`.`role_permissions`
@@ -87,7 +88,7 @@ CREATE TABLE  `ecomerce`.`role_permissions` (
 
 /*!40000 ALTER TABLE `role_permissions` DISABLE KEYS */;
 LOCK TABLES `role_permissions` WRITE;
-INSERT INTO `ecomerce`.`role_permissions` VALUES  (1,'1','1','2010-07-23 02:10:37','2010-07-23 02:10:37');
+INSERT INTO `ecomerce`.`role_permissions` VALUES  (1,1,1,'2010-07-23 02:10:37','2010-07-23 02:10:37');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `role_permissions` ENABLE KEYS */;
 
@@ -139,7 +140,8 @@ INSERT INTO `ecomerce`.`schema_migrations` VALUES  ('20100715194531'),
  ('20100722223842'),
  ('20100722230056'),
  ('20100723200640'),
- ('20100723210941');
+ ('20100723210941'),
+ ('20100726174249');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
 
@@ -156,7 +158,7 @@ CREATE TABLE  `ecomerce`.`user_roles` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ecomerce`.`user_roles`
@@ -164,7 +166,8 @@ CREATE TABLE  `ecomerce`.`user_roles` (
 
 /*!40000 ALTER TABLE `user_roles` DISABLE KEYS */;
 LOCK TABLES `user_roles` WRITE;
-INSERT INTO `ecomerce`.`user_roles` VALUES  (3,2,1,'2010-07-24 00:52:08','2010-07-24 00:52:08');
+INSERT INTO `ecomerce`.`user_roles` VALUES  (3,2,1,'2010-07-24 00:52:08','2010-07-24 00:52:08'),
+ (7,5,2,'2010-07-30 21:39:03','2010-07-30 21:39:03');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `user_roles` ENABLE KEYS */;
 
@@ -184,7 +187,7 @@ CREATE TABLE  `ecomerce`.`users` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ecomerce`.`users`
@@ -192,7 +195,8 @@ CREATE TABLE  `ecomerce`.`users` (
 
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 LOCK TABLES `users` WRITE;
-INSERT INTO `ecomerce`.`users` VALUES  (2,'rfonte','12345','Rodrigo','rodrigo.fonte@abril.com.br','2010-07-24 23:45:38','2010-07-24 00:31:19','2010-07-25 02:45:38');
+INSERT INTO `ecomerce`.`users` VALUES  (2,'rfonte','12345','Rodrigo','rodrigo@fonte.com.br','2010-07-30 14:52:09','2010-07-24 00:31:19','2010-07-30 21:52:09'),
+ (5,'teste1','12345','teste1','rodrigo.rodrigo@teste.com.br','2010-07-30 14:52:04','2010-07-30 21:39:03','2010-07-30 21:52:04');
 UNLOCK TABLES;
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
