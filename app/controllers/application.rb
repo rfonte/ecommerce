@@ -18,17 +18,19 @@ class ApplicationController < ActionController::Base
       render :text => "Acesso Negado !!"
       return false
     end
-    allowed = false
-    permission = "#{params[:controller]}_#{params[:action]}"
-    userID = User.find(:first , :conditions => "(login = '#{session[:login]}')")
-    roleID = UserRole.find(:first, :conditions => "(user_id = #{userID.id})")
-    permissionID = RolePermission.find(:first, :conditions => "(role_id = #{roleID.role_id})")
-    if permissionID
-      permissionName = Permission.find(:first, :conditions => "id = #{permissionID.permission_id}")
-      allowed = true if permissionID.permission_id == 1 || permissionName.name == "#{permission}"
+    admin_role = 1
+    authorized = false
+    page_code = "#{params[:controller]}_#{params[:action]}"
+    permission = Permission.find_by_name page_code
+    user = User.find(:first , :conditions => "(login = '#{session[:login]}')")
+    user_role = UserRole.find(:first , :conditions => "(user_id = '#{user.id}')")
+    if user_role.role_id == admin_role
+        authorized = true
+    else
+        role = RolePermission.find(:first , :conditions => "(role_id = '#{user_role.role_id}' and permission_id = #{permission.id})")
+        authorized = !role.nil?
     end
-    render :text => "Acesso Negado !!" unless allowed
-    #A.find(:all, :conditions => ["b.foo = ?", 25], :joins => {:b =>{}} )
+    render :text => "Acesso Negado !!" unless authorized
   end
 end
 
