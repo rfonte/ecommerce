@@ -6,6 +6,7 @@
 }
 a:link {color: #FFFAFA;}
 a:visited {color: #EEE9E9;}
+h1 { text-align: center;}
 body {
     background: #000 none repeat scroll 0 0;
     font-family: arial;
@@ -89,4 +90,8 @@ ul.menuCP {
 }
 ul.menuCP a:link { color: #fff;}
 ul.menuCP a:hover { color: #bebebe; text-decoration: underline;}
+table.scaffoldTable {
+    border-width: 1px;
+    color: #ccc;
+}
 

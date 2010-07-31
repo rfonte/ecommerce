@@ -1,4 +1,4 @@
-<div id="login">
+<div>
   <% form_tag(new_session_path, :method => "post") do %>
     <% if session[:login] %>
       <p>Olá, <%= session[:login]%>

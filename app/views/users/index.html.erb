@@ -1,5 +1,4 @@
-<h1 align="center">Listando Usuário</h1>
-
+<h1>Listando Usuário</h1>
 <table>
   <tr>
     <th>ID</th>
@@ -18,7 +17,6 @@
     <td><%=h user.name %></td>
     <td><%=h user.email %></td>
     <td><%=h user.last_login %></td>
-    <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -27,6 +25,6 @@
 
 <br />
 
-<%= link_to 'New user', new_user_path %>
+<p><%= link_to 'New user', new_user_path %></p>
 <p><a href="/control_panel"/>Voltar ao Painel de Controle</p>
 
