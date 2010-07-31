@@ -3653,3 +3653,227 @@ Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-27 14:36:51) [
   [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
 Filter chain halted as [:autorization] rendered_or_redirected.
 Completed in 1ms (View: 0, DB: 0) | 200 OK [http://localhost/control_panel]
+
+
+Processing SessionController#index (for 127.0.0.1 at 2010-07-30 23:16:07) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 21ms (View: 18, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-30 23:16:08) [GET]
+
+
+ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" with {:method=>:get}):
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:142:in `load'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /home/rodrigo/.gem/ruby/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    /home/rodrigo/.gem/ruby/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/rodrigo/.gem/ruby/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing SessionController#index (for 127.0.0.1 at 2010-07-30 23:17:03) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-30 23:17:13) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.1ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panel_index') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte')) LIMIT 1[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUserRole Load (0.1ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE ((user_id = '2')) LIMIT 1[0m
+  [4;35;1mUserRole Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 98ms (View: 73, DB: 3) | 200 OK [http://localhost/control_panel]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-30 23:17:14) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.1ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'users_index') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte')) LIMIT 1[0m
+  [4;35;1mUser Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUserRole Load (0.1ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE ((user_id = '2')) LIMIT 1[0m
+  [4;35;1mUserRole Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 51ms (View: 14, DB: 3) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-07-30 23:17:18) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'users_new') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte')) LIMIT 1[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` WHERE ((user_id = '2')) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 33ms (View: 10, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-30 23:17:21) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panel_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte')) LIMIT 1[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` WHERE ((user_id = '2')) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+Rendering template within layouts/application
+Rendering control_panel/index
+Completed in 25ms (View: 2, DB: 2) | 200 OK [http://localhost/control_panel]
+
+
+Processing UserRolesController#index (for 127.0.0.1 at 2010-07-30 23:17:22) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'user_roles_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte')) LIMIT 1[0m
+  [4;36;1mUser Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` WHERE ((user_id = '2')) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` [0m
+Rendering template within layouts/application
+Rendering user_roles/index
+Completed in 38ms (View: 13, DB: 3) | 200 OK [http://localhost/user_roles]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-07-30 23:17:32) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'users_show') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte')) LIMIT 1[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUserRole Load (0.1ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE ((user_id = '2')) LIMIT 1[0m
+  [4;35;1mUserRole Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 32ms (View: 6, DB: 3) | 200 OK [http://localhost/users/2]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-07-30 23:17:34) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'users_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte')) LIMIT 1[0m
+  [4;36;1mUser Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` WHERE ((user_id = '2')) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+Completed in 46ms (View: 14, DB: 4) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#edit (for 127.0.0.1 at 2010-07-30 23:17:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPermission Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'users_edit') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte')) LIMIT 1[0m
+  [4;35;1mUser Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUserRole Load (0.1ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE ((user_id = '2')) LIMIT 1[0m
+  [4;35;1mUserRole Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering users/edit
+Completed in 35ms (View: 12, DB: 2) | 200 OK [http://localhost/users/2/edit]
+
+
+Processing SessionController#index (for 127.0.0.1 at 2010-07-30 23:17:43) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionController#new (for 127.0.0.1 at 2010-07-30 23:17:57) [POST]
+  Parameters: {"authenticity_token"=>"a0f00f0ca2deddd7981f892737093fd701e99da8", "login"=>"teste1", "senha"=>"12345"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'teste1' or email = 'teste1') AND password = '12345') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'teste1' or email = 'teste1')) LIMIT 1[0m
+  [4;35;1mUser Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'teste1' AND `users`.id <> 5) LIMIT 1[0m
+  [4;36;1mUser Exists (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo.rodrigo@teste.com.br' AND `users`.id <> 5) LIMIT 1[0m
+  [4;35;1mUser Update (0.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-07-31 02:17:58', `last_login` = '2010-07-30 23:17:58' WHERE `id` = 5[0m
+  [4;36;1mSQL (52.3ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering session/index
+Completed in 152ms (View: 14, DB: 55) | 200 OK [http://localhost/session/new]
+
+
+Processing ControlPanelController#index (for 127.0.0.1 at 2010-07-30 23:18:04) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panel_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'teste1')) LIMIT 1[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.3ms)[0m   [0mSELECT * FROM `user_roles` WHERE ((user_id = '5')) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mRolePermission Load (0.3ms)[0m   [0mSELECT * FROM `role_permissions` WHERE ((role_id = '2' and permission_id = 2)) LIMIT 1[0m
+Filter chain halted as [:autorization] rendered_or_redirected.
+Completed in 28ms (View: 0, DB: 3) | 200 OK [http://localhost/control_panel]
