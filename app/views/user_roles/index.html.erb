@@ -1,4 +1,4 @@
-<h1>Listing user_roles</h1>
+<h1 align="center">Lista de User / Roles</h1>
 
 <table>
   <tr>
@@ -10,7 +10,6 @@
   <tr>
     <td><%=h user_role.user_id %></td>
     <td><%=h user_role.role_id %></td>
-    <td><%= link_to 'Show', user_role %></td>
     <td><%= link_to 'Edit', edit_user_role_path(user_role) %></td>
     <td><%= link_to 'Destroy', user_role, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

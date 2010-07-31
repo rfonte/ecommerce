@@ -40,16 +40,16 @@ body {
     display: block;
     margin: 2px auto;
 }
-#menu {
-   /* background: #000 none repeat scroll 0 0;
-    height: 35px;*/
-}
 #contentCore {
     background: #000 none repeat scroll 0 0;
-    padding: 4px;
+    padding: 4px 0px;
     position: relative;
     top: 2px;
-}/*
+}
+/*#menu {
+    background: #000 none repeat scroll 0 0;
+    height: 35px;
+}
 #footer {
     background: #000 none repeat scroll 0 0;
     height:35px;
@@ -69,7 +69,7 @@ body {
     width: 224px;
 }
 .close_login {
-    margin: -19px 225px;
+    margin: -1px 225px;
     position: absolute;
 }
 #loginLink {
@@ -80,4 +80,13 @@ body {
 .logout {
     display: block;
 }*/
+ul.menuCP {
+    font-size: 17px;
+    height: 102px;
+    list-style: none outside none;
+    padding: 0px 3px;
+    width: 135px;
+}
+ul.menuCP a:link { color: #fff;}
+ul.menuCP a:hover { color: #bebebe; text-decoration: underline;}
 
