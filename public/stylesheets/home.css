@@ -90,8 +90,4 @@ ul.menuCP {
 }
 ul.menuCP a:link { color: #fff;}
 ul.menuCP a:hover { color: #bebebe; text-decoration: underline;}
-table.scaffoldTable {
-    border-width: 1px;
-    color: #ccc;
-}
 
