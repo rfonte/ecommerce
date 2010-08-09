@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
     user = User.find(:first , :conditions => ["login = ?",session[:login]])
     user_role = UserRole.find(:first , :conditions => ["user_id = ?",user.id])
 
-    if user_role.role_id == admin_roles
+    if user_role.role_id == admin_role
         authorized = true
     else
         role = RolePermission.find(:first , :conditions => ["role_id = ? and permission_id = ?",user_role.role_id,permission.id])

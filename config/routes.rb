@@ -1,15 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :role_permissions
-
   map.resources :user_roles
-
   map.resources :permissions
-
   map.resources :roles
-
   map.resources :users
-
   map.resources :sessions, :only => [:new, :index]
+  map.resources :control_panels, :only => [:index]
 
   # The priority is based upon order of creation: first created -> highest priority.
 

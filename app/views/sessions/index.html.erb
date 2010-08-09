@@ -5,7 +5,6 @@
     <% end%>
     <p>
       <strong><%= flash[:user_looser] %></strong>
-      <!--strong><%= flash[:user_winner] %></strong-->
     </p>
     <p>Login: <input type="text" class="textbox" name="login" value="Digite seu e-mail ou login"/></p>
     <p>Senha: <input id="pwd" type="textbox" class="textbox" name="senha" value="Digite sua senha"/></p>
@@ -13,12 +12,6 @@
     <p><%= link_to 'Cadastre-se !', new_user_path %></p>
     <input type="submit" class="loginbtn"value="Entrar"/>
     <input type="submit" class="logout" name="logout" value="Logout">
-    <!--
-    <%= link_to "teste", :action => 'login' unless session[:user] %>
-    <% if flash[:message] %>
-      <strong><%= h flash[:message] %></strong>
-    <% end %>
-    -->
   <% end %>
 </div>
 
