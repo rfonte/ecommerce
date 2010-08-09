@@ -12,17 +12,6 @@ class PermissionsController < ApplicationController
     end
   end
 
-  # GET /permissions/1
-  # GET /permissions/1.xml
-  def show
-    @permission = Permission.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @permission }
-    end
-  end
-
   # GET /permissions/new
   # GET /permissions/new.xml
   def new

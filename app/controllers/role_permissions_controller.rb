@@ -11,17 +11,6 @@ class RolePermissionsController < ApplicationController
     end
   end
 
-  # GET /role_permissions/1
-  # GET /role_permissions/1.xml
-  def show
-    @role_permission = RolePermission.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @role_permission }
-    end
-  end
-
   # GET /role_permissions/new
   # GET /role_permissions/new.xml
   def new

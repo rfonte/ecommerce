@@ -14,17 +14,22 @@ class ApplicationController < ActionController::Base
   #filter_parameter_logging :password
 
   def autorization
-    if session[:login] == nil
-      render :text => "Acesso Negado !!"
-      return false
-    end
     admin_role = 1
     authorized = false
     page_code = "#{params[:controller]}_#{params[:action]}"
+
+    if session[:login].nil? and page_code == "users_new"
+      return authorized = true
+    elsif session[:login].nil?
+      render :text => "Acesso Negado !!"
+      return false
+    end
+
     permission = Permission.find_by_name page_code
     user = User.find(:first , :conditions => "(login = '#{session[:login]}')")
     user_role = UserRole.find(:first , :conditions => "(user_id = '#{user.id}')")
-    if user_role.role_id == admin_role
+
+    if user_role.role_id == admin_roles
         authorized = true
     else
         role = RolePermission.find(:first , :conditions => "(role_id = '#{user_role.role_id}' and permission_id = #{permission.id})")

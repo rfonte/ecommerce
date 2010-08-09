@@ -11,17 +11,6 @@ class UserRolesController < ApplicationController
     end
   end
 
-  # GET /user_roles/1
-  # GET /user_roles/1.xml
-  def show
-    @user_role = UserRole.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @user_role }
-    end
-  end
-
   # GET /user_roles/new
   # GET /user_roles/new.xml
   def new
