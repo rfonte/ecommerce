@@ -6,6 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :sessions, :only => [:new, :index]
   map.resources :control_panels, :only => [:index]
+  map.resources :forgot_pass
 
   # The priority is based upon order of creation: first created -> highest priority.
 
