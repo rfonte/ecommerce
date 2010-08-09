@@ -13,7 +13,7 @@ class SessionController < ApplicationController
       if user_valid
         flash[:user_winner] = "Login efetuado com sucesso !!"
         flash[:user_looser] = ""
-        user = User.find(:first , :conditions => "(login = '#{login}' or email = '#{login}')")
+        user = User.find(:first , :conditions => ["login = ? or email = ?",login,login])
         user.last_login = Time.now
         user.save
         session[:login] = login

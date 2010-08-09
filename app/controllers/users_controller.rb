@@ -65,7 +65,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    user_role = UserRole.find(:first , :conditions => "(user_id = '#{params[:id]}')")
+    user_role = UserRole.find(:first , :conditions => ["user_id = ?",params[:id]])
     user_role.destroy
 
     respond_to do |format|

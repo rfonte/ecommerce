@@ -26,13 +26,13 @@ class ApplicationController < ActionController::Base
     end
 
     permission = Permission.find_by_name page_code
-    user = User.find(:first , :conditions => "(login = '#{session[:login]}')")
-    user_role = UserRole.find(:first , :conditions => "(user_id = '#{user.id}')")
+    user = User.find(:first , :conditions => ["login = ?",session[:login]])
+    user_role = UserRole.find(:first , :conditions => ["user_id = ?",user.id])
 
     if user_role.role_id == admin_roles
         authorized = true
     else
-        role = RolePermission.find(:first , :conditions => "(role_id = '#{user_role.role_id}' and permission_id = #{permission.id})")
+        role = RolePermission.find(:first , :conditions => ["role_id = ? and permission_id = ?",user_role.role_id,permission.id])
         authorized = !role.nil?
     end
     render :text => "Acesso Negado !!" unless authorized
