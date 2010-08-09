@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
   def new
     login = params[:login]
     senha = params[:senha]
@@ -26,6 +26,7 @@ class SessionController < ApplicationController
   end
 
   def index
+
   end
 
  end
