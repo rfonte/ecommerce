@@ -2,6 +2,8 @@ class RolesController < ApplicationController
   # GET /roles
   # GET /roles.xml
   before_filter :autorization
+  before_filter before_filter :session_expiry, :except => [:login, :logout]
+
   def index
     @roles = Role.find(:all)
 

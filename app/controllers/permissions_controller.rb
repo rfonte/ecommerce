@@ -2,6 +2,7 @@ class PermissionsController < ApplicationController
   # GET /permissions
   # GET /permissions.xml
   before_filter :autorization
+  before_filter before_filter :session_expiry, :except => [:login, :logout]
 
   def index
     @permissions = Permission.find(:all)

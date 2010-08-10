@@ -2,6 +2,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   before_filter :autorization
+  before_filter before_filter :session_expiry, :except => [:login, :logout]
+
   def index
     @users = User.find(:all)
 

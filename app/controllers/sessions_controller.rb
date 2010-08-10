@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  before_filter before_filter :session_expiry, :except => [:login, :logout]
+
   def new
     login = params[:login]
     senha = params[:senha]
@@ -13,6 +15,7 @@ class SessionsController < ApplicationController
       if user_valid
         flash[:user_winner] = "Login efetuado com sucesso !!"
         flash[:user_looser] = ""
+        session[:expires_at] = 20.minutes.from_now
         user = User.find(:first , :conditions => ["login = ? or email = ?",login,login])
         user.last_login = Time.now
         user.save
