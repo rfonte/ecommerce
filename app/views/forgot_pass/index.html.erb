@@ -1,24 +1,12 @@
 <h1>Forgot Password ?</h1>
+<h3>Entre com o e-mail cadastrado, você recebera em até vinte e quatro horas
+    um e-mail para que sua senha seja resetada.</h3>
 
-<% form_for(@forgot_pass) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :old_pass %><br />
-    <%= f.text_field :old_pass %>
-  </p>
-  <p>
-    <%= f.label :new_pass %><br />
-    <%= f.text_field :new_pass %>
-  </p>
-  <p>
-    <%= f.label :new_pass_again %><br />
-    <%= f.text_field :new_pass_again %>
-  </p>
-  <p>
-    <%= f.submit "Save" %>
-  </p>
+<% form_tag(forgot_pass_path, :method => "post") do %>
+  <strong><%= flash[:forgot_pass_message] %></strong>
+  <p>E-Mail: <input type="text" class="" name="email_forgot_password" /></p>
+  <input type="submit" class="" value="Enviar"/>
 <% end %>
 
-<%= link_to 'Back', sessions_path %>
+<p><%= link_to 'Back', sessions_path %></p>
 
