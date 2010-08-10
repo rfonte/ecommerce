@@ -11,8 +11,8 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /testes/1
-  # GET /testes/1.xml
+  # GET /users/1
+  # GET /users/1.xml
   def show
     @users = User.find(params[:id])
 
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         flash[:notice] = 'User was successfully created.'
-        format.html { redirect_to(@user) }
+        format.html { redirect_to :action => "index"}
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.update_attributes(params[:user])
         flash[:notice] = 'User was successfully updated.'
-        format.html { redirect_to(@user) }
+        format.html { redirect_to :action=>'index' }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

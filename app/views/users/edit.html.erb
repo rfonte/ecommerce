@@ -20,8 +20,8 @@
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :last_login %><br />
-    <%= f.text_field :last_login %>
+    Last login<br />
+    <%=  @user.last_login %>
   </p>
   <p>
     <%= f.submit "Update" %>
