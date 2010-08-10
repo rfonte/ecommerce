@@ -11,6 +11,17 @@ class UsersController < ApplicationController
     end
   end
 
+  # GET /testes/1
+  # GET /testes/1.xml
+  def show
+    @users = User.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @users }
+    end
+  end
+
   # GET /users/new
   # GET /users/new.xml
   def new

@@ -40,4 +40,37 @@
 <% end %>
 
 <%= link_to 'Back', role_permissions_path %>
+=begin
+<table>
+  <tr>Permissions</tr>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+  </tr>
+
+  <% for @permissions.each do |i| %>
+    <tr>
+      <td><%=h permission.id %></td>
+      <td><%=h permission.name %></td>
+      <td><%= link_to 'Edit', edit_permission_path(permission) %></td>
+      <td><%= link_to 'Destroy', permission, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+
+  <tr>Roles</tr>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+  </tr>
+
+  <% for @roles.each do |j| %>
+    <tr>
+      <td><%=h role.id %></td>
+      <td><%=h role.name %></td>
+      <td><%= link_to 'Edit', edit_role_path(role) %></td>
+      <td><%= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+=end
 
