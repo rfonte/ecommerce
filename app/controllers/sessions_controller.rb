@@ -1,5 +1,4 @@
 class SessionsController < ApplicationController
-  before_filter before_filter :session_expiry, :except => [:login, :logout]
 
   def new
     login = params[:login]

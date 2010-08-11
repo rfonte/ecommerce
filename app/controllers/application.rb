@@ -40,9 +40,13 @@ class ApplicationController < ActionController::Base
 
   def session_expiry
     @time_left = (session[:expires_at] - Time.now).to_i
-    unless @time_left > 0
-      reset_session
-      flash[:user_looser] = 'Sua sessão expirou. Favor entrar novamente.'
+    if session[:login] != nil
+      unless @time_left > 0
+        reset_session
+        flash[:user_looser] = 'Sua sessão expirou. Favor entrar novamente.'
+        redirect_to :controller => 'sessions', :action => 'index'
+      end
+    else
       redirect_to :controller => 'sessions', :action => 'index'
     end
   end
