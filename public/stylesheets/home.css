@@ -1,0 +1,93 @@
+* {
+    margin:0;
+    padding:0;
+    border:0;
+    text-decoration:none;
+}
+a:link {color: #FFFAFA;}
+a:visited {color: #EEE9E9;}
+h1 { text-align: center;}
+body {
+    background: #000 none repeat scroll 0 0;
+    font-family: arial;
+    font-size:11px;
+    color: white;
+}
+#body {
+    background:#000 none repeat scroll 0 0;
+    display:block;
+    width:880px;
+    margin: 0px auto;
+}
+#topo {
+    /*display:block;
+    height:100px;*/
+}
+#logo {
+    /*background: #000 none repeat scroll 0 0;
+    display:block;
+    height:100px;
+    width:180px;*/
+}
+#banner {
+/*    background: #000 none repeat scroll 0 0;
+    display:block;
+    height:100px;
+    margin: -100px 180px;
+    width: 700px;*/
+}
+#content {
+    background: #ccc none repeat scroll 0 0;
+    display: block;
+    margin: 2px auto;
+}
+#contentCore {
+    background: #000 none repeat scroll 0 0;
+    padding: 4px 0px;
+    position: relative;
+    top: 2px;
+}
+/*#menu {
+    background: #000 none repeat scroll 0 0;
+    height: 35px;
+}
+#footer {
+    background: #000 none repeat scroll 0 0;
+    height:35px;
+    position: relative;
+    top: 4px;
+}
+.textbox {
+    color: #959595;
+}
+#login {
+    background: #ccc none repeat scroll 0 0;
+    display: none;
+    height: 150px;
+    margin: -28px 642px;
+    padding: 5px;
+    text-decoration: none;
+    width: 224px;
+}
+.close_login {
+    margin: -1px 225px;
+    position: absolute;
+}
+#loginLink {
+    margin: 8px 820px;
+    position: absolute;
+    text-decoration: none;
+}
+.logout {
+    display: block;
+}*/
+ul.menuCP {
+    font-size: 17px;
+    height: 102px;
+    list-style: none outside none;
+    padding: 0px 3px;
+    width: 135px;
+}
+ul.menuCP a:link { color: #fff;}
+ul.menuCP a:hover { color: #bebebe; text-decoration: underline;}
+
