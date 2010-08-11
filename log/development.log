@@ -4632,3 +4632,39 @@ ActionController::RoutingError (No route matches "/stylesheets/scaffold.css" wit
     script/server:3
 
 Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (57.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100715194531)
+Migrating to CreateRoles (20100722195231)
+Migrating to CreatePermissions (20100722195301)
+Migrating to CreateUserRoles (20100722223842)
+Migrating to CreateRolePermissions (20100722230056)
+Migrating to AjusteUserRoles (20100723200640)
+Migrating to AjusteRolePermissions (20100723210941)
+Migrating to AjusteTypeVariaveisBanco (20100726174249)
+Migrating to CreateForgotPasses (20100809214806)
+  [4;36;1mSQL (233.2ms)[0m   [0;1mCREATE TABLE `forgot_passes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100809214806')[0m
+  [4;36;1mSQL (29.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (75.0ms)[0m   [0mSHOW FIELDS FROM `forgot_passes`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `forgot_passes`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW KEYS FROM `forgot_passes`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `permissions`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `permissions`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `role_permissions`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mdescribe `role_permissions`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `role_permissions`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mdescribe `user_roles`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `user_roles`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (40.3ms)[0m   [0;1mSHOW KEYS FROM `users`[0m

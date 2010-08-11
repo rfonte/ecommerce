@@ -1,7 +1,7 @@
-<div>
+<div id="divLogin">
   <% form_tag(new_session_path, :method => "post") do %>
     <% if session[:login] %>
-      <p>Olá, <%= session[:login]%>
+      <p class="bemvindo">Bem Vindo, <%= session[:login]%>
     <% end%>
     <p>
       <strong><%= flash[:user_looser] %></strong>
