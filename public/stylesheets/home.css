@@ -1,7 +1,11 @@
-#loginLink {
+p#loginLink {
     display: block;
     float: right;
+    font: 13px arial,sans-serif;
     margin-right: 3px;
+    margin-top: 7px;
+}
+#loginLink {
     text-decoration: underline;
 }
 

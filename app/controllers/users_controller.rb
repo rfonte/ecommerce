@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   before_filter :autorization
-  before_filter before_filter :session_expiry, :except => [:login, :logout]
+  before_filter :session_expiry, :except => [:login, :logout, :new]
 
   def index
     @users = User.find(:all)
@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   # GET /users/new.xml
   def new
     @user = User.new
+    puts 33333333333333333333
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @user }

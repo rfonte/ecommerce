@@ -3,13 +3,13 @@
     padding:0;
     border:0;
     text-decoration:none;
+    font-family: arial,sans-serif;
 }
 a:link {color: #FFFAFA;}
 a:visited {color: #EEE9E9;}
 h1 { text-align: center;}
 body {
     background: #000 none repeat scroll 0 0;
-    font-family: arial;
     font-size:11px;
     color: white;
 }
