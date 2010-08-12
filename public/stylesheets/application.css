@@ -54,13 +54,7 @@ body {
 .textbox {
     color: #959595;
 }
-#loginLink {
-    display: block;
-    float: right;
-    margin-top: -6px;
-    margin-right: 3px;
-    text-decoration: none;
-}
+
 /*
 #footer {
     background: #000 none repeat scroll 0 0;

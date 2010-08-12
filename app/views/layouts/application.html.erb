@@ -16,9 +16,31 @@
   <div id="content">
     <div id="menu">
     menu
-    <p><a href="javascript:void(0)" id="loginLink">Login</a></p>
+    <% if session[:login] == nil %>
+      <p><a href="javascript:void(0)" id="loginLink">Login</a></p>
+    <% end %>
     </div>
     <div id="contentCore">
+      <% if session[:login] %>
+            <p class="bemvindo">Bem Vindo, <a href="javascript:void(0)" id="loginLink"><%= session[:login]%></a></p>
+      <% end%>
+      <div id="divLogin">
+        <% form_tag(new_session_path, :method => "post") do %>
+          <% if session[:login] == nil %>
+            <p>
+              <strong><%= flash[:user_looser] %></strong>
+            </p>
+            <p>Login: <input type="text" class="textbox" name="login" value="Digite seu e-mail ou login"/></p>
+            <p>Senha: <input id="pwd" type="textbox" class="textbox" name="senha" value="Digite sua senha"/></p><br/>
+            <p><%= link_to 'Esqueceu a Senha ?', forgot_pass_path %></p>
+            <p><%= link_to 'Cadastre-se !', new_user_path %></p><br/>
+            <input type="submit" class="loginbtn"value="Entrar"/>
+          <% end %>
+          <% if session[:login] != nil %>
+            <input type="submit" class="logout" name="logout" value="Efetuar Logout">
+          <% end %>
+        <% end %>
+      </div>
       <%= yield  %>
     </div>
   </div>

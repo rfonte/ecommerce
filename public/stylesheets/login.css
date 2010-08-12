@@ -4,6 +4,8 @@
     margin-right: 3px;
 }
 #divLogin {
-    /*display:none;*/
+    background: #ccc none repeat scroll 0 0;
+    display:none;
+    margin-left:657px;
 }
 
