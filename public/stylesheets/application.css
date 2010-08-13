@@ -48,11 +48,12 @@ body {
     top: 2px;
 }
 #menu {
-    background: #000 none repeat scroll 0 0;
+    background: #ccc url("/images/Menu_opc1.png") no-repeat scroll 0 0;
     height: 35px;
 }
 .textbox {
     color: #959595;
+    width: 149px;
 }
 
 /*
@@ -62,21 +63,9 @@ body {
     position: relative;
     top: 4px;
 }
-#login {
-    background: #ccc none repeat scroll 0 0;
-    display: none;
-    height: 150px;
-    margin: -28px 642px;
-    padding: 5px;
-    text-decoration: none;
-    width: 224px;
-}
 .close_login {
     margin: -1px 225px;
     position: absolute;
-}
-.logout {
-    display: block;
 }*/
 ul.menuCP {
     font-size: 17px;

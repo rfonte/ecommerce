@@ -2,11 +2,19 @@
     font: 13px arial,sans-serif;
     float: right;
     margin-top: -33px;
-    margin-right: 3px;
+    margin-right: 10px;
 }
 #divLogin {
-    background: #ccc none repeat scroll 0 0;
+    background: #ccc url("/images/Login_Fundo_opc2.png") no-repeat scroll 0 0;
     display:none;
-    margin-left:657px;
+    height: 200px;
+    margin-left: 696px;
+    margin-top: -35px;
+    position: absolute;
+    width: 200px;
+}
+.logout {
+    margin-left: 50px;
+    margin-top: 50px;
 }
 

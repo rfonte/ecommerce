@@ -8,4 +8,9 @@ p#loginLink {
 #loginLink {
     text-decoration: underline;
 }
+#loginContent {
+    margin-top: 40px;
+    padding: 0px 6px;
+    font: 15px arial;
+}
 
