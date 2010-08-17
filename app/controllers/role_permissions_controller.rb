@@ -1,11 +1,16 @@
 class RolePermissionsController < ApplicationController
-  # GET /role_permissions
-  # GET /role_permissions.xml
   before_filter :autorization
   before_filter before_filter :session_expiry, :except => [:login, :logout]
 
   def index
     @role_permissions = RolePermission.find(:all)
+
+    @roles =[]
+    @permissions =[]
+    @role_permissions.each do |permission|
+      @roles[permission.id] = Role.find(:first, :conditions => ["id = #{permission.role_id}"])
+      @permissions[permission.id] = Permission.find(:first, :conditions => ["id = #{permission.permission_id}"])
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,8 +18,6 @@ class RolePermissionsController < ApplicationController
     end
   end
 
-  # GET /role_permissions/new
-  # GET /role_permissions/new.xml
   def new
     @role_permission = RolePermission.new
 
@@ -24,13 +27,10 @@ class RolePermissionsController < ApplicationController
     end
   end
 
-  # GET /role_permissions/1/edit
   def edit
     @role_permission = RolePermission.find(params[:id])
   end
 
-  # POST /role_permissions
-  # POST /role_permissions.xml
   def create
     @role_permission = RolePermission.new(params[:role_permission])
 
@@ -46,8 +46,6 @@ class RolePermissionsController < ApplicationController
     end
   end
 
-  # PUT /role_permissions/1
-  # PUT /role_permissions/1.xml
   def update
     @role_permission = RolePermission.find(params[:id])
 
@@ -63,8 +61,6 @@ class RolePermissionsController < ApplicationController
     end
   end
 
-  # DELETE /role_permissions/1
-  # DELETE /role_permissions/1.xml
   def destroy
     @role_permission = RolePermission.find(params[:id])
     @role_permission.destroy

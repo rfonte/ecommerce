@@ -1,36 +1,9 @@
-<<<<<<< HEAD:app/views/role_permissions/new.html.erb
-=======
-
->>>>>>> 38ab50e820224ac4f027004a254fa2deb9d714d8:app/views/role_permissions/new.html.erb
 <h1>Nova Role por Permissão</h1>
 
-<table border="2px">
-  <tr>
-    <th>
-      <tr>
-        <th>Permissions</th>
-      </tr>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-      </tr>
-    </th>
-    <th>
-      <tr>
-        <th>Roles</th>
-      </tr>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-      </tr>
-    </th>
-  </tr>
+<table>
+
 </table>
-<<<<<<< HEAD:app/views/role_permissions/new.html.erb
-=======
-
->>>>>>> 38ab50e820224ac4f027004a254fa2deb9d714d8:app/views/role_permissions/new.html.erb
-
+<!-->
 <% form_for(@role_permission) do |f| %>
   <%= f.error_messages %>
 
@@ -46,24 +19,24 @@
     <%= f.submit "Create" %>
   </p>
 <% end %>
+-->
+<p><%= link_to 'Back', role_permissions_path %></p>
 
-<%= link_to 'Back', role_permissions_path %>
-=begin
-<table>
+<!--table>
   <tr>Permissions</tr>
   <tr>
     <th>ID</th>
     <th>Name</th>
   </tr>
 
-  <% for @permissions.each do |i| %>
+  <% #for @permissions.each do |i| %>
     <tr>
-      <td><%=h permission.id %></td>
-      <td><%=h permission.name %></td>
-      <td><%= link_to 'Edit', edit_permission_path(permission) %></td>
-      <td><%= link_to 'Destroy', permission, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%#=h permission.id %></td>
+      <td><%#=h permission.name %></td>
+      <td><%#= link_to 'Edit', edit_permission_path(permission) %></td>
+      <td><%#= link_to 'Destroy', permission, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
-  <% end %>
+  <% #end %>
 
   <tr>Roles</tr>
   <tr>
@@ -71,14 +44,13 @@
     <th>ID</th>
   </tr>
 
-  <% for @roles.each do |j| %>
+  <% #for @roles.each do |j| %>
     <tr>
-      <td><%=h role.id %></td>
-      <td><%=h role.name %></td>
-      <td><%= link_to 'Edit', edit_role_path(role) %></td>
-      <td><%= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%#=h role.id %></td>
+      <td><%#=h role.name %></td>
+      <td><%#= link_to 'Edit', edit_role_path(role) %></td>
+      <td><%#= link_to 'Destroy', role, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
-  <% end %>
-</table>
-=end
+  <%# end %>
+</table-->
 

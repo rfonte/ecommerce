@@ -2,14 +2,14 @@
 
 <table>
   <tr>
-    <th>Id role</th>
-    <th>Id permission</th>
+    <th>Role Name</th>
+    <th>Permission Name</th>
   </tr>
 
 <% for role_permission in @role_permissions %>
   <tr>
-    <td><%=h role_permission.role_id %></td>
-    <td><%=h role_permission.permission_id %></td>
+    <td><%=h @roles[role_permission.id].name  %></td>
+    <td><%=h @permissions[role_permission.id].name  %></td>
     <td><%= link_to 'Edit', edit_role_permission_path(role_permission) %></td>
     <td><%= link_to 'Destroy', role_permission, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -18,6 +18,6 @@
 
 <br />
 
-<%= link_to 'New role_permission', new_role_permission_path %>
-<%= link_to 'Voltar ao Painel de Controle', control_panels_path %>
+<p><%= link_to 'Criar Nova', new_role_permission_path %></p>
+<p><%= link_to 'Voltar ao Painel de Controle', control_panels_path %></p>
 
