@@ -5529,3 +5529,775 @@ Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:43:30) [POST]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-18 09:56:30) [GET]
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 28ms (View: 24, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 09:56:41) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 09:56:49) [POST]
+  Parameters: {"authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8", "login"=>"rfonte", "senha"=>"12345"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (4.3ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (4.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (11.7ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (1.1ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-18 16:56:49', `last_login` = '2010-08-18 09:56:49' WHERE `id` = 2[0m
+  [4;35;1mSQL (29.7ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 115ms (View: 16, DB: 54) | 200 OK [http://localhost/sessions/new]
+
+
+Processing ControlPanelsController#index (for 127.0.0.1 at 2010-08-18 09:56:55) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPermission Columns (8.5ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (0.3ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUserRole Load (0.2ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;35;1mUserRole Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panels/index
+Completed in 110ms (View: 7, DB: 14) | 200 OK [http://localhost/control_panels]
+
+
+Processing UserRolesController#index (for 127.0.0.1 at 2010-08-18 09:56:58) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'user_roles_index') LIMIT 1[0m
+  [4;35;1mUser Load (11.8ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.2ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'user_roles_index') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Load (19.3ms)[0m   [0;1mSELECT * FROM `user_roles` [0m
+Rendering template within layouts/application
+Rendering user_roles/index
+Completed in 139ms (View: 40, DB: 39) | 200 OK [http://localhost/user_roles]
+
+
+Processing RolePermissionsController#index (for 127.0.0.1 at 2010-08-18 09:56:58) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (11.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.4ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (16.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.2ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mRolePermission Load (0.2ms)[0m   [0;1mSELECT * FROM `role_permissions` [0m
+  [4;35;1mRolePermission Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `role_permissions`[0m
+  [4;36;1mRole Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (32.5ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` IN (1,2)) [0m
+  [4;36;1mPermission Load (0.4ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` IN (1,3)) [0m
+Rendering template within layouts/application
+Rendering role_permissions/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #12 of app/views/role_permissions/index.html.erb:
+9: <% for role_permission in @role_permissions %>
+10:   <tr>
+11:     <td><%=h role_permission.role.name %></td>
+12:     <td><%=h @roles[role_permission.id].name  %></td>
+13:     <td><%=h @permissions[role_permission.id].name  %></td>
+14:     <td><%= link_to 'Edit', edit_role_permission_path(role_permission) %></td>
+15:     <td><%= link_to 'Destroy', role_permission, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/views/role_permissions/index.html.erb:12
+    app/views/role_permissions/index.html.erb:9:in `each'
+    app/views/role_permissions/index.html.erb:9
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/role_permissions_controller.rb:8:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (107.8ms)
+Rendered /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.8ms)
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing RolePermissionsController#index (for 127.0.0.1 at 2010-08-18 09:57:53) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (9.8ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (6.2ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mRolePermission Load (0.2ms)[0m   [0;1mSELECT * FROM `role_permissions` [0m
+  [4;35;1mRolePermission Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `role_permissions`[0m
+  [4;36;1mRole Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` IN (1,2)) [0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` IN (1,3)) [0m
+Rendering template within layouts/application
+Rendering role_permissions/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #13 of app/views/role_permissions/index.html.erb:
+10:   <tr>
+11:     <td><%=h role_permission.role.name %></td>
+12:     <td><%#=h @roles[role_permission.id].name  %></td>
+13:     <td><%=h @permissions[role_permission.id].name  %></td>
+14:     <td><%= link_to 'Edit', edit_role_permission_path(role_permission) %></td>
+15:     <td><%= link_to 'Destroy', role_permission, :confirm => 'Are you sure?', :method => :delete %></td>
+16:   </tr>
+
+    app/views/role_permissions/index.html.erb:13
+    app/views/role_permissions/index.html.erb:9:in `each'
+    app/views/role_permissions/index.html.erb:9
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/role_permissions_controller.rb:8:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (321.7ms)
+Rendered /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (2.2ms)
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing RolePermissionsController#index (for 127.0.0.1 at 2010-08-18 09:58:06) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;35;1mUser Load (21.7ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mRolePermission Load (26.6ms)[0m   [0;1mSELECT * FROM `role_permissions` [0m
+  [4;35;1mRolePermission Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `role_permissions`[0m
+  [4;36;1mRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` IN (1,2)) [0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` IN (1,3)) [0m
+Rendering template within layouts/application
+Rendering role_permissions/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]) on line #12 of app/views/role_permissions/index.html.erb:
+9: <% for role_permission in @role_permissions %>
+10:   <tr>
+11:     <td><%=h role_permission.role.name %></td>
+12:     <td><%=h @permissions[role_permission.id].name  %></td>
+13:     <td><%= link_to 'Edit', edit_role_permission_path(role_permission) %></td>
+14:     <td><%= link_to 'Destroy', role_permission, :confirm => 'Are you sure?', :method => :delete %></td>
+15:   </tr>
+
+    app/views/role_permissions/index.html.erb:12
+    app/views/role_permissions/index.html.erb:9:in `each'
+    app/views/role_permissions/index.html.erb:9
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:369:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1177:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/role_permissions_controller.rb:8:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1256:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:184:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendered /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (83.4ms)
+Rendered /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (16.3ms)
+Rendering /home/rfonte/projects/ecommerce/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing RolePermissionsController#index (for 127.0.0.1 at 2010-08-18 09:58:18) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mRolePermission Load (0.2ms)[0m   [0;1mSELECT * FROM `role_permissions` [0m
+  [4;35;1mRolePermission Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `role_permissions`[0m
+  [4;36;1mRole Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.7ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` IN (1,2)) [0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` IN (1,3)) [0m
+Rendering template within layouts/application
+Rendering role_permissions/index
+Completed in 364ms (View: 60, DB: 7) | 200 OK [http://localhost/role_permissions]
+
+
+Processing RolePermissionsController#index (for 127.0.0.1 at 2010-08-18 09:58:43) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (4.4ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'role_permissions_index') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mRolePermission Load (0.2ms)[0m   [0;1mSELECT * FROM `role_permissions` [0m
+  [4;35;1mRolePermission Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `role_permissions`[0m
+  [4;36;1mRole Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mRole Load (0.1ms)[0m   [0mSELECT * FROM `roles` WHERE (`roles`.`id` IN (1,2)) [0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`id` IN (1,3)) [0m
+Rendering template within layouts/application
+Rendering role_permissions/index
+Completed in 171ms (View: 56, DB: 11) | 200 OK [http://localhost/role_permissions]
+
+
+Processing ControlPanelsController#index (for 127.0.0.1 at 2010-08-18 09:58:55) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.2ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panels/index
+Completed in 105ms (View: 23, DB: 4) | 200 OK [http://localhost/control_panels]
+
+
+Processing ControlPanelsController#index (for 127.0.0.1 at 2010-08-18 10:09:32) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPermission Columns (8.6ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (2.3ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUserRole Load (0.4ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;35;1mUserRole Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panels/index
+Completed in 98ms (View: 8, DB: 14) | 200 OK [http://localhost/control_panels]
+
+
+Processing ControlPanelsController#index (for 127.0.0.1 at 2010-08-18 10:11:20) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.2ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panels/index
+Completed in 108ms (View: 19, DB: 4) | 200 OK [http://localhost/control_panels]
+
+
+Processing ControlPanelsController#index (for 127.0.0.1 at 2010-08-18 10:12:26) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mPermission Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `permissions`[0m
+  [4;35;1mPermission Load (9.1ms)[0m   [0mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUserRole Load (0.2ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;35;1mUserRole Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `user_roles`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering control_panels/index
+Completed in 99ms (View: 12, DB: 13) | 200 OK [http://localhost/control_panels]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:13:47) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 29ms (View: 24, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:16:21) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 56ms (View: 51, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:16:46) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:21:33) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 50ms (View: 16, DB: 1) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:23:33) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:24:27) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 51ms (View: 46, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:25:37) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:26:00) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:26:38) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 29ms (View: 16, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:28:46) [POST]
+  Parameters: {"logout"=>"Efetuar Logout", "authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 33ms (View: 27, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:29:17) [POST]
+  Parameters: {"authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8", "login"=>"rfonte", "senha"=>"12345"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (9.2ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;36;1mUser Load (18.8ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.7ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-18 17:29:17', `last_login` = '2010-08-18 10:29:17' WHERE `id` = 2[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 95ms (View: 7, DB: 41) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:29:39) [POST]
+  Parameters: {"authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8", "login"=>"rfonte", "senha"=>"12345"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (29.0ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (14.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.5ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-18 17:29:39', `last_login` = '2010-08-18 10:29:39' WHERE `id` = 2[0m
+  [4;36;1mSQL (26.4ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 147ms (View: 40, DB: 72) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 10:31:08) [POST]
+  Parameters: {"authenticity_token"=>"26ea1e6e15144d8405f83882fa7d9dc76957cfc8", "login"=>"rfonte", "senha"=>"12345"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.8ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Exists (0.5ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (2.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-18 17:31:08', `last_login` = '2010-08-18 10:31:08' WHERE `id` = 2[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 107ms (View: 25, DB: 13) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 11:26:32) [GET]
+  [4;35;1mSQL (0.9ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (18.7ms)[0m   [0mSELECT * FROM `users` WHERE ((login = NULL or email = NULL) AND password = NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 84ms (View: 30, DB: 20) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 11:26:35) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (16.4ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = NULL or email = NULL) AND password = NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 40ms (View: 9, DB: 17) | 200 OK [http://localhost/sessions/new]
+
+
+Processing ControlPanelsController#index (for 127.0.0.1 at 2010-08-18 11:26:42) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPermission Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT * FROM `permissions` WHERE (`permissions`.`name` = 'control_panels_index') LIMIT 1[0m
+  [4;35;1mUser Load (10.4ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUserRole Load (0.1ms)[0m   [0mSELECT * FROM `user_roles` WHERE (user_id = 2) LIMIT 1[0m
+  [4;36;1mUserRole Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `user_roles`[0m
+Redirected to actionindexcontrollersessions
+Filter chain halted as [:session_expiry] rendered_or_redirected.
+Completed in 85ms (DB: 16) | 302 Found [http://localhost/control_panels]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-08-18 11:26:42) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 28ms (View: 24, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#index (for 127.0.0.1 at 2010-08-18 11:27:27) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 11:27:47) [POST]
+  Parameters: {"authenticity_token"=>"c6c3763d3e2ea0ae22cd6e9db71a1a22cef81f3e", "login"=>"rfonte", "senha"=>"12345"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (11.9ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (1.4ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-18 18:27:47', `last_login` = '2010-08-18 11:27:47' WHERE `id` = 2[0m
+  [4;36;1mSQL (9.7ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 88ms (View: 29, DB: 26) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 11:46:20) [POST]
+  Parameters: {"authenticity_token"=>"c6c3763d3e2ea0ae22cd6e9db71a1a22cef81f3e", "login"=>"rfonte", "senha"=>"12345"}
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.9ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Exists (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (13.8ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-18 18:46:20', `last_login` = '2010-08-18 11:46:20' WHERE `id` = 2[0m
+  [4;36;1mSQL (5.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 91ms (View: 19, DB: 26) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 11:47:49) [POST]
+  Parameters: {"authenticity_token"=>"c6c3763d3e2ea0ae22cd6e9db71a1a22cef81f3e", "login"=>"rfonte", "senha"=>"12345"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (23.7ms)[0m   [0mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Exists (0.6ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Update (6.3ms)[0m   [0mUPDATE `users` SET `updated_at` = '2010-08-18 18:47:49', `last_login` = '2010-08-18 11:47:49' WHERE `id` = 2[0m
+  [4;36;1mSQL (16.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 396ms (View: 59, DB: 49) | 200 OK [http://localhost/sessions/new]

@@ -8,8 +8,8 @@
 
 <% for role_permission in @role_permissions %>
   <tr>
-    <td><%=h @roles[role_permission.id].name  %></td>
-    <td><%=h @permissions[role_permission.id].name  %></td>
+    <td><%=h role_permission.role.name %></td>
+    <td><%=h role_permission.permission.name %></td>
     <td><%= link_to 'Edit', edit_role_permission_path(role_permission) %></td>
     <td><%= link_to 'Destroy', role_permission, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

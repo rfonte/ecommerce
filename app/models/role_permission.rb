@@ -1,5 +1,5 @@
 class RolePermission < ActiveRecord::Base
-  has_many :roles
-  has_many :permissions
+  belongs_to :role
+  belongs_to :permission
 end
 

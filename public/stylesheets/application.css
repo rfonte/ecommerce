@@ -1,9 +1,15 @@
-* {
+* {/*OK*/
     margin:0;
     padding:0;
     border:0;
     text-decoration:none;
     font-family: arial,sans-serif;
+}
+.createNew {/*OK*/
+    margin: 0px 295px;
+}
+.pageBack {/*OK*/
+    margin: -13px 0px 0px 381px;
 }
 a:link {color: #FFFAFA;}
 a:visited {color: #EEE9E9;}
@@ -16,16 +22,9 @@ body {
 #contentCore table {
     margin: 25px 0px 0px 295px;
 }
-.createNew {
-    margin: 0px 295px;
-}
-.pageBack {
-    margin: -13px 0px 0px 381px;
-}
 #body {
-    background:#000 none repeat scroll 0 0;
-    display:block;
-    width:880px;
+    background: #000 none repeat scroll 0 0;
+    display: block;
     margin: 0px auto;
 }
 #topo {

@@ -3,14 +3,7 @@ class RolePermissionsController < ApplicationController
   before_filter before_filter :session_expiry, :except => [:login, :logout]
 
   def index
-    @role_permissions = RolePermission.find(:all)
-
-    @roles =[]
-    @permissions =[]
-    @role_permissions.each do |permission|
-      @roles[permission.id] = Role.find(:first, :conditions => ["id = #{permission.role_id}"])
-      @permissions[permission.id] = Permission.find(:first, :conditions => ["id = #{permission.permission_id}"])
-    end
+    @role_permissions = RolePermission.find(:all, :include => [:role, :permission])
 
     respond_to do |format|
       format.html # index.html.erb

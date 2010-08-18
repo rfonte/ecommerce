@@ -9,7 +9,6 @@
 </head>
 <body>
 <div id="body">
-
   <div id="login">
     <% if session[:login] %>
       <p class="bemvindo">Bem Vindo, <a href="javascript:void(0)" id="loginLink"><%= session[:login]%></a></p>
@@ -17,12 +16,12 @@
     <div id="loginContent">
       <% form_tag(new_session_path, :method => "post") do %>
         <% if session[:login] == nil %>
-          <p><strong><%= flash[:user_looser] %></strong></p>
-            <input type="text" class="textbox" name="login" value="Digite seu e-mail ou login."/>
-            <input id="pwd" type="textbox" class="textbox" name="senha" value="Digite sua senha."/><br/>
-          <p><%= link_to 'Esqueceu a Senha ?', forgot_pass_path %></p>
-          <p><%= link_to 'Cadastre-se !', new_user_path %></p><br/>
-          <input type="submit" class="loginbtn"value="Entrar"/>
+          <input type="text" class="textbox" name="login" value="Digite seu e-mail ou login."/>
+          <input id="pwd" type="textbox" class="textbox" name="senha" value="Digite sua senha."/>
+          <input type="submit" class="loginbtn"value="OK"/>
+          <%= link_to 'Cadastre-se !', new_user_path %>
+          <strong><%= flash[:user_looser] %></strong>
+          <%= link_to 'Esqueceu a Senha ?', forgot_pass_path %>
         <% end %>
         <% if session[:login] != nil %>
           <input type="submit" class="logout" name="logout" value ="Efetuar Logout">
