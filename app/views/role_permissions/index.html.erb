@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <th>Role Name</th>
-    <th>Permission Name</th>
+    <td>Role Name</td>
+    <td>Permission Name</td>
   </tr>
 
 <% for role_permission in @role_permissions %>
@@ -18,6 +18,6 @@
 
 <br />
 
-<p><%= link_to 'Criar Nova', new_role_permission_path %></p>
-<p><%= link_to 'Voltar ao Painel de Controle', control_panels_path %></p>
+<p class="createNew"><%= link_to 'Criar Nova', new_role_permission_path %></p>
+<p class="pageBack"><%= link_to 'Voltar ao Painel de Controle', control_panels_path %></p>
 

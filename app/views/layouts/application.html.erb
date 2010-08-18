@@ -9,6 +9,27 @@
 </head>
 <body>
 <div id="body">
+
+  <div id="login">
+    <% if session[:login] %>
+      <p class="bemvindo">Bem Vindo, <a href="javascript:void(0)" id="loginLink"><%= session[:login]%></a></p>
+    <% end%>
+    <div id="loginContent">
+      <% form_tag(new_session_path, :method => "post") do %>
+        <% if session[:login] == nil %>
+          <p><strong><%= flash[:user_looser] %></strong></p>
+            <input type="text" class="textbox" name="login" value="Digite seu e-mail ou login."/>
+            <input id="pwd" type="textbox" class="textbox" name="senha" value="Digite sua senha."/><br/>
+          <p><%= link_to 'Esqueceu a Senha ?', forgot_pass_path %></p>
+          <p><%= link_to 'Cadastre-se !', new_user_path %></p><br/>
+          <input type="submit" class="loginbtn"value="Entrar"/>
+        <% end %>
+        <% if session[:login] != nil %>
+          <input type="submit" class="logout" name="logout" value ="Efetuar Logout">
+        <% end %>
+      <% end %>
+    </div>
+  </div>
   <div id="topo">
     <div id="logo">logo</div>
     <div id="banner">banner</div>
@@ -21,34 +42,13 @@
     <% end %>
     </div>
     <div id="contentCore">
-      <% if session[:login] %>
-            <p class="bemvindo">Bem Vindo, <a href="javascript:void(0)" id="loginLink"><%= session[:login]%></a></p>
-      <% end%>
-      <div id="divLogin">
-        <div id="loginContent">
-          <% form_tag(new_session_path, :method => "post") do %>
-            <% if session[:login] == nil %>
-              <p>
-                <strong><%= flash[:user_looser] %></strong>
-              </p>
-              <p><input type="text" class="textbox" name="login" value="Digite seu e-mail ou login."/></p>
-              <p><input id="pwd" type="textbox" class="textbox" name="senha" value="Digite sua senha."/></p><br/>
-              <p><%= link_to 'Esqueceu a Senha ?', forgot_pass_path %></p>
-              <p><%= link_to 'Cadastre-se !', new_user_path %></p><br/>
-              <input type="submit" class="loginbtn"value="Entrar"/>
-            <% end %>
-            <% if session[:login] != nil %>
-              <input type="submit" class="logout" name="logout" value="Efetuar Logout">
-            <% end %>
-          <% end %>
-        </div>
-      </div>
       <%= yield  %>
     </div>
   </div>
   <div id="footer">footer</div>
 </div>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <script src="/jquery-1.4.2.min.js"></script>
   <script src="/javascripts/textboxClear.js" type="text/javascript"></script>
   <script src="/javascripts/login.js" type="text/javascript"></script>
   <script src="/javascripts/home.js" type="text/javascript"></script>

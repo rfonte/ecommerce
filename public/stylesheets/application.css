@@ -13,6 +13,15 @@ body {
     font-size:11px;
     color: white;
 }
+#contentCore table {
+    margin: 25px 0px 0px 295px;
+}
+.createNew {
+    margin: 0px 295px;
+}
+.pageBack {
+    margin: -13px 0px 0px 381px;
+}
 #body {
     background:#000 none repeat scroll 0 0;
     display:block;
