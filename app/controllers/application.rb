@@ -21,6 +21,8 @@ class ApplicationController < ActionController::Base
     page_code = "#{params[:controller]}_#{params[:action]}"
 
     if session[:login].nil? and page_code == "users_new"
+    #if cookies[:login].nil? and page_code == "users_new"
+
       return authorized = true
     elsif session[:login].nil?
       render :text => "Acesso Negado !!"

@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
 
     if logout != nil
       session[:login] = nil
+      #cookies[:login] = nil
     else
 
       user_valid = User.user_is_valid?(login, senha)
@@ -18,6 +19,8 @@ class SessionsController < ApplicationController
         user = User.find(:first , :conditions => ["login = ? or email = ?",login,login])
         user.last_login = Time.now
         user.save
+
+        #cookies[:login] = { :value => "#{login}", :expires => Time.now + 3600}
         session[:login] = login
       else
         flash[:user_looser] = "Usuário Inválido !!"
