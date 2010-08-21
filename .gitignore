@@ -1,2 +1,2 @@
 db/schema.rb
-log/development.log
+log/*

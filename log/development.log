@@ -6301,3 +6301,105 @@ Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 11:47:49) [POST]
 Rendering template within layouts/application
 Rendering sessions/index
 Completed in 396ms (View: 59, DB: 49) | 200 OK [http://localhost/sessions/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-18 20:58:11) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 36ms (View: 29, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 20:58:19) [POST]
+  Parameters: {"authenticity_token"=>"fd1e54b157117eecb4dfd851edae8cdcb8362d98", "login"=>"rfonte", "senha"=>"12345"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (17.3ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Exists (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-18 23:58:19', `last_login` = '2010-08-18 20:58:19' WHERE `id` = 2[0m
+  [4;35;1mSQL (42.2ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 101ms (View: 15, DB: 63) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 20:59:51) [POST]
+  Parameters: {"authenticity_token"=>"fd1e54b157117eecb4dfd851edae8cdcb8362d98", "login"=>"rfonte", "senha"=>"12345"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Exists (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-18 23:59:51', `last_login` = '2010-08-18 20:59:51' WHERE `id` = 2[0m
+  [4;35;1mSQL (95.6ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 131ms (View: 14, DB: 98) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 21:02:18) [POST]
+  Parameters: {"authenticity_token"=>"fd1e54b157117eecb4dfd851edae8cdcb8362d98", "login"=>"rfonte", "senha"=>"12345"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-19 00:02:18', `last_login` = '2010-08-18 21:02:18' WHERE `id` = 2[0m
+  [4;35;1mSQL (57.9ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 83ms (View: 6, DB: 60) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 21:02:50) [POST]
+  Parameters: {"authenticity_token"=>"fd1e54b157117eecb4dfd851edae8cdcb8362d98", "login"=>"rfonte", "senha"=>"12345"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = 'rfonte' or email = 'rfonte') AND password = '12345') LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (login = 'rfonte' or email = 'rfonte') LIMIT 1[0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Exists (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (`users`.`login` = BINARY 'rfonte' AND `users`.id <> 2) LIMIT 1[0m
+  [4;35;1mUser Exists (0.3ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (`users`.`email` = BINARY 'rodrigo@fonte.com.br' AND `users`.id <> 2) LIMIT 1[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-08-19 00:02:50', `last_login` = '2010-08-18 21:02:50' WHERE `id` = 2[0m
+  [4;35;1mSQL (51.4ms)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 76ms (View: 6, DB: 54) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 21:02:53) [GET]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE ((login = NULL or email = NULL) AND password = NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 15ms (View: 6, DB: 1) | 200 OK [http://localhost/sessions/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-08-18 21:03:39) [GET]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE ((login = NULL or email = NULL) AND password = NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/index
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/sessions/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-08-20 22:12:49) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering home/index
+Completed in 37ms (View: 30, DB: 0) | 200 OK [http://localhost/]
