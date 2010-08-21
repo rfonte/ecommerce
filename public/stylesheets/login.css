@@ -1,18 +1,21 @@
 #login {/*OK*/
     background-color: #000 none repeat scroll 0 0;
     height: 30px;
+    padding: 3px 0px;
 }
 #loginContent {/*OK*/
     font: 13px arial;
-    padding: 4px 190px;
+    margin-left: 250px;
 }
-.bemvindo { /*OK*/
+#bemvindo { /*OK*/
     font: 13px arial,sans-serif;
-    margin-top: -12px;
-    margin-left: 240px;
-    padding: 11px 170px;
+    margin-left: 380px;
 }
 #loginLink {/*OK*/
     text-decoration: underline;
+}
+.logout {/*OK*/
+    margin-top: -14px;
+    margin-left: 111px;
 }
 

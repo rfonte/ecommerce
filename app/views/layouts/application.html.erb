@@ -10,9 +10,12 @@
 <body>
 <div id="body">
   <div id="login">
-    <% if session[:login] %>
-      <p class="bemvindo">Bem Vindo, <a href="javascript:void(0)" id="loginLink"><%= session[:login]%></a></p>
-    <% end%>
+    <div id=bemvindo>
+      <% if session[:login] %>
+        <p>Bem Vindo, <a href="javascript:void(0)" id="loginLink"><%= session[:login]%></a></p>
+        <input type="submit" class="logout" name="logout" value ="Efetuar Logout">
+      <% end%>
+    </div>
     <div id="loginContent">
       <% form_tag(new_session_path, :method => "post") do %>
         <% if session[:login] == nil %>
@@ -22,9 +25,6 @@
           <%= link_to 'Cadastre-se !', new_user_path %>
           <strong><%= flash[:user_looser] %></strong>
           <%= link_to 'Esqueceu a Senha ?', forgot_pass_path %>
-        <% end %>
-        <% if session[:login] != nil %>
-          <input type="submit" class="logout" name="logout" value ="Efetuar Logout">
         <% end %>
       <% end %>
     </div>
@@ -36,9 +36,6 @@
   <div id="content">
     <div id="menu">
     menu
-    <% if session[:login] == nil %>
-      <p id="loginLink"><a href="javascript:void(0)" >Login</a></p>
-    <% end %>
     </div>
     <div id="contentCore">
       <%= yield  %>
