@@ -44,8 +44,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     @user.roles << Role.find(2)
+    @user.profile.name = params[:name]
+
+    @profile = Profile.new(:id => @user.id, :name => params[:name], :campo2 => params[:campo2])
+
     respond_to do |format|
       if @user.save
+        @profile.save
         flash[:notice] = 'User was successfully created.'
         format.html { redirect_to :action => "index"}
         format.xml  { render :xml => @user, :status => :created, :location => @user }
